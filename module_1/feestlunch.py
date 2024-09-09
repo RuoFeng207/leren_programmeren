@@ -9,4 +9,4 @@ aantal_kortingsbonnen = 3
 
 #totaal
 totaal = aantal_croissantjes*croissantjes_prijs + aantal_stokbrood*stokbroden_prijs - aantal_kortingsbonnen*Kortingsbon
-print(f"u moet intotaal {totaal} euro betalen")
+print(f"De feestlunch kost je bij de bakker {totaal} euro voor de 17 croissantjes en de 2 stokbroden als de 3 kortingsbonnen nog geldig zijn!")
