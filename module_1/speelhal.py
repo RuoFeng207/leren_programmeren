@@ -1,3 +1,5 @@
+from termcolor import colored, cprint, COLORS
+
 #al het geld is in euro 
 toegang = 7.45
 personen = 4
@@ -13,4 +15,4 @@ print(totaal_vr)
 
 totaal_prijs =round(totaal_toegang+totaal_vr,2)
 
-print(f"Dit geweldige dagje-uit met 4 mensen in de Speelhal met 45 minuten VR kost je maar {totaal_prijs} euro")
+print(f"Dit geweldige dagje-uit met 4 mensen in de Speelhal met 45 minuten VR kost je maar {colored(totaal_prijs,'yellow', attrs=['bold'])} euro")
