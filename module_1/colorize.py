@@ -1,14 +1,13 @@
 # from termcolor import colored, cprint, COLORS
 
-print('')
-cprint('Dit is helemaal rood', 'red')
-cprint('Deze heeft een rode achtergrond', on_color='on_red')
+# print('')
+# cprint('Dit is helemaal rood', 'red')
+# print('Dit is deels', colored('rood', 'red'))
+# cprint('Deze heeft een rode achtergrond', on_color='on_red')
 
-print('')
-print(colored('Deze is paars op groen', 'magenta', 'on_green'))
+# print('')
+# print(colored('Deze is paars op groen', 'magenta', 'on_green'))
 
-print('')
-cprint('Je kan het zelfs dikgedrukt maken', attrs=['bold'])
 # print('')
 # cprint('Je kan het zelfs dikgedrukt maken', attrs=['bold'])
 
@@ -25,4 +24,8 @@ cprint('Je kan het zelfs dikgedrukt maken', attrs=['bold'])
 # print('Of emoji\'s gebruiken zoals deze: 👍')
 # print('Hier vindt je de lijst met emojis:', link)
 
-print('')
+# print('')
+
+amount = 555
+
+print (6.34*float(amount))
