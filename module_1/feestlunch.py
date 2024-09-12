@@ -12,4 +12,5 @@ aantal_kortingsbonnen =int(input("Hoeveel kortingsbonnen heeft u: "))
 
 #totaal
 totaal = aantal_croissantjes*croissantjes_prijs + aantal_stokbrood*stokbroden_prijs - aantal_kortingsbonnen*Kortingsbon
-print(f"De feestlunch kost je bij de bakker {colored(totaal,'yellow', attrs=['bold'])} euro voor de {aantal_croissantjes} croissantjes en de {aantal_stokbrood} stokbroden als de {aantal_kortingsbonnen} kortingsbonnen nog geldig zijn!")
+print(f"De feestlunch kost je bij de bakker {colored(round(totaal,2
+),'yellow', attrs=['bold'])} euro voor de {aantal_croissantjes} croissantjes en de {aantal_stokbrood} stokbroden als de {aantal_kortingsbonnen} kortingsbonnen nog geldig zijn!")
