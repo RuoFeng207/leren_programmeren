@@ -1,11 +1,7 @@
 {
-	"folders": [
-		{
-			"path": ".."
-		},
-		{
-			"path": "../../code/bootcamp"
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "deel-2"
+        }
+    ]
 }
