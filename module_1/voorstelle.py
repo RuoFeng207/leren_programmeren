@@ -8,6 +8,6 @@ geslacht_voor_naam_woord= 'haar' if geslacht == 'b' else 'zijn'
 
 print("")
 print("Mag ik je voorstellen aan", naam)
-print(f"{naam()} leeftijd is:", leeftijd)
+print(f"{naam} leeftijd is:", leeftijd)
 print(f"{naam}'s favoriete kleur is:", kleur)
 print(f"Het verschil tussen {leeftijd} leeftijd en {favo_nummer} is:",geslacht_voor_naam_woord)
