@@ -1,6 +1,6 @@
 naam = input("Wat is uw naam? ")
-adres = int(input("Wat is uw adres?"))
-postcode = int(input("Wat is uw postcode? "))
+adres = input("Wat is uw adres? ")
+postcode = input("Wat is uw postcode? ")
 woonplaats = input("Wat is uw woonplaats? ")
 pincode = int(input("Nu we toch bezig zijn mag ik ook uw pincode? "))
 print(f"Dus uw naam is {naam} uw adres is {adres} uw postcode is {postcode} woonplaats is {woonplaats } en uw pincode is {pincode}")
