@@ -1,10 +1,9 @@
 
-gastheer = True
-gasten = False
-drank = False
-chips = False
-
 gastheer=input("Wat is de naam van de gastheer/vrouw: ")
+gasten = 4
+drank = True
+chips = True
+
 
 
 #Een feest moet minimaal gasten of een gastheer hebben.
@@ -21,7 +20,7 @@ start_condition_5 = gastheer and drank
 start_condition_6 = not chips 
 
 
-if gastheer==("Ruo Feng") or start_condition_1 and start_condition_2 and start_condition_3 and start_condition_4 and start_condition_5 and start_condition_6 and  not gastheer==("Van pelt"):
+if gastheer==("Ruo Feng") or not gastheer==("Van pelt") or start_condition_1 and start_condition_2 and start_condition_3 and start_condition_4 and start_condition_5 and start_condition_6 and gasten >3 and not gasten>20 :
     
     print('Start the Party')
 
