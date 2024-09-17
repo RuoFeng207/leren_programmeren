@@ -26,5 +26,5 @@ if start_condition_1 and start_condition_2 and start_condition_3 and start_condi
     print('Start the Party')
 
 else:
-    gastheer==("Rudi")
+    gastheer==("Van pelt")
     print('No Party')
