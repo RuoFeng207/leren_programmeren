@@ -138,12 +138,9 @@ cijfer =score/7
 
 
 
-
 if cijfer <=2:
     print(COMPETENTIE_ADVIES_ZORGELIJK)
 elif cijfer >=3:
     print(COMPETENTIE_ADVIES_TWIJFELACHTIG)
 else:
    print(COMPETENTIE_ADVIES_GERUSTSTELLEND)
-
-
