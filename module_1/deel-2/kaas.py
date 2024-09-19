@@ -6,8 +6,6 @@ print("Je mag aleen andwoorden met ja of nee.")
 time.sleep(2)
 
 
-
-
 kleur =input('is de kaas geel? ')
 kleur = kleur.lower()
 
