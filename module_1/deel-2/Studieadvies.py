@@ -1,6 +1,6 @@
 from studieadviestext import * 
 max_score= 28
-#met bonus opdracht 1
+#met bonus opdracht 1 en 2
 # inlijding
 print(STUDIEDOKTER_TITEL)
 AANTAL_WEKEN_VRAAG = int(input( 'Hoeveel weken ben je al bezig met de opleiding? '))
@@ -135,6 +135,8 @@ while True:
     break
 
 cijfer =score/7
+
+
 
 
 if cijfer <=2:
