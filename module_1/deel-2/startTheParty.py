@@ -1,6 +1,6 @@
 
 gastheer=input("Wat is de naam van de gastheer/vrouw: ")
-gasten = 300
+gasten = 4
 drank = False
 chips = False
 
