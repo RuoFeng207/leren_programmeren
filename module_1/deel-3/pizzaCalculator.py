@@ -27,36 +27,31 @@ while True:
 prijs_small = 6.57
 prijs_medium = 8.95
 prijs_large = 12.99
-
+totaal = 0
 # chek =<0
 print("****************************KASSA BON****************************")
 if small<=0:
     quit
 else:
-    print(f"Pizza's small:      {small}x{prijs_small}= {small*prijs_small}")  
+    print(f"Pizza's small:      {small}x{prijs_small}= {small*prijs_small}") 
+    totaal = totaal+small*prijs_small
 if medium<=0:
     quit
 else:
      print(f"Pizza's medium:     {medium}x{prijs_medium}= {medium*prijs_medium}")
+     totaal = totaal+medium*prijs_medium
 if large<=0:
     quit
 else:
-    print(f"Pizza's large:      {large}x{prijs_large}= {small*prijs_large}") 
+    print(f"Pizza's large:      {large}x{prijs_large}= {large*prijs_large}")
+    totaal= totaal+large*prijs_large
 
 if small<=0 and medium<=0 and large<=0:
     print("Je hebt niks besteld")
-
 else:
-    if small<0:
-        totaal=(small*prijs_small + large*prijs_large)
-    if medium<0:
-        totaal=( small*prijs_small + large*prijs_large)
-
-    if large<0:
-        totaal=(small*prijs_small + medium*prijs_medium )
-        
+    
     totaal =round(totaal,2)
-    print(f"Totaal:            {totaal}") 
+    print(f"Totaal:            {totaal}")   
 
 print("-----------------------------------------------------------------")
  
