@@ -55,7 +55,6 @@ else:
     if large<0:
         totaal=(small*prijs_small + medium*prijs_medium )
         
-    # totaal=(small*prijs_small + medium*prijs_medium + large*prijs_large)
     totaal =round(totaal,2)
     print(f"Totaal:            {totaal}") 
 
