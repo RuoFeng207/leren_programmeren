@@ -5,12 +5,13 @@ def vraag_getal(aantal):
     return getal
 def deel_getallen(a,b):
     
-    antwoord = int(a / b)
+    antwoord = float(a / b)
     return antwoord
 
 
 getal_1 = vraag_getal("eerste")
 getal_2 = vraag_getal("tweede")
+
 
 
 if getal_2 == 0:
