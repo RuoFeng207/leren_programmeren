@@ -45,10 +45,19 @@ else:
 
 if small<=0 and medium<=0 and large<=0:
     print("Je hebt niks besteld")
+
 else:
-    totaal=(small*prijs_small + medium*prijs_medium + large*prijs_large)
+    if small<0:
+        totaal=(small*prijs_small + large*prijs_large)
+    if medium<0:
+        totaal=( small*prijs_small + large*prijs_large)
+
+    if large<0:
+        totaal=(small*prijs_small + medium*prijs_medium )
+        
+    # totaal=(small*prijs_small + medium*prijs_medium + large*prijs_large)
     totaal =round(totaal,2)
-    print(f"Totaal:            {totaal}")   
+    print(f"Totaal:            {totaal}") 
 
 print("-----------------------------------------------------------------")
  
