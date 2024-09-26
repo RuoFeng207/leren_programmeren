@@ -43,5 +43,3 @@ test('sky-is-the-limit', expected, calculated)
 
 report()
 
-
-
