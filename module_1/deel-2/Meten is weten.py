@@ -19,5 +19,3 @@ elif getal_1< getal_2:
 else:
     print(f"{getal_1} is gelijk aan {getal_2}")
     print("Er is geen maximum of minimum.")
-print(f"Max getal is {max}")
-print(f"Minimum getal is {Min}")
