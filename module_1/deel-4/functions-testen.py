@@ -6,6 +6,8 @@ expected = 5.65
 calculated = round(nr,2)
 test('example', expected, calculated)
 
+
+
 nr = 13
 expected = 13.0
 calculated = float(nr)# use one function to calculate expected number
