@@ -22,6 +22,6 @@ def num_gelijk(num1,num2):
 num1 = int(input("Geef getal 1: "))
 num2= int(input("Geef getal 2: "))
 
-num1_grootst(num1,num2)
-num2_grootst(num1,num2)
-num_gelijk(num1,num2)
+# num1_grootst(num1,num2)
+# num2_grootst(num1,num2)
+# num_gelijk(num1,num2)
