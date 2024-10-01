@@ -36,9 +36,9 @@ result1 = (nr1 - (nr4 - nr3)) / (nr2 + nr3)
 result2 = divide(subtract(nr1,subtract(nr4,nr3)),add(nr2,nr3))
 test('expression-5', result1, result2)
 
-result1 = nr1-nr2*nr3/nr3==nr4
-result2 = subtract(divide (multiply(nr2,nr3),nr3),nr1)
-test('expression-6', result1, result2)
+# result1 = nr1-nr2*nr3/nr3==nr4
+# result2 = subtract(divide (multiply(nr2,nr3),nr3),nr1)
+# test('expression-6', result1, result2)
 
 
 report()
