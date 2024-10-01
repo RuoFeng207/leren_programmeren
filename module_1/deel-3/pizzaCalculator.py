@@ -1,25 +1,31 @@
 
 #nummer chek
 # Keuze pizza
-while True:
+small =-1
+medium =-1
+large=-1
+while small<0:
 
     try:
         small= int(input("Hoeveel small pizza's wilt u? "))
-        break
+        if small<0:
+            print("Je kan geen negatieve getallen invoeren")
     except:
         print("Dit is geen heel nummer ")
 
-while True:
+while medium<0:
     try:
         medium = int(input("Hoeveel medium pizza's wilt u? "))
-        break
+        if medium<0:
+            print("Je kan geen negatieve getallen invoeren ")
     except:
         print("Dit is geen heel nummer")
         
-while True:
+while large<0:
     try:
         large = int(input("Hoeveel large pizza's wilt u? "))
-        break
+        if large<0:
+            print("Je kan geen negatieve getallen invoeren")
     except:
         print("Dit is geen heel nummer")
 
@@ -46,7 +52,7 @@ else:
     print(f"Pizza's large:      {large}x{prijs_large}= {large*prijs_large}")
     totaal= totaal+large*prijs_large
 
-if small<=0 and medium<=0 and large<=0:
+if small==0 and medium==0 and large==0:
     print("Je hebt niks besteld")
 else:
     
