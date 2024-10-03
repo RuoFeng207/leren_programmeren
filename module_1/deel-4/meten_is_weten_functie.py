@@ -14,5 +14,5 @@ def num(num1, num2):
     else: 
         print("Getal 1 en 2 zijn even groot ")
     
-        return "Beide getallen zijn even groot"
+        return "Getal 1 en 2 zijn even groot"
 
