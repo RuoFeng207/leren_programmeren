@@ -1,6 +1,6 @@
 
 # # # toets_data has name:score combinations separated by a komma
-# toets_data = 'Sofie:8,Emma:7,Ahmed:9,Daan:6,Lisa:8,Fatima:7,Ruben:9,Ayoub:6,Bram:6,Maria:7'
+toets_data = 'Sofie:8,Emma:7,Ahmed:9,Daan:6,Lisa:8,Fatima:7,Ruben:9,Ayoub:6,Bram:6,Maria:7'
 # separator = ','
 position= 8 # position of Bram, first position starts with 0
  
@@ -14,16 +14,17 @@ position= 8 # position of Bram, first position starts with 0
 
 
 def get_value(toets_data: list, separator: str, position: int) -> str:
-    lijst= toets_data.split(separator)
-    position
-    return lijst
+    toets_data.split(separator)
+    separator(",")
+    position (1)
+    return get_value
 
 toets_data = ('Sofie:8,Emma:7,Ahmed:9,Daan:6,Lisa:8,Fatima:7,Ruben:9,Ayoub:6,Bram:6,Maria:7')
 
-print(get_value(toets_data,',',1))
 
 
+def test(tekst):
+    print((tekst).split())
+    return test
 
-def get_value(data: str, separator: str, position: int) -> str:
-    pass
-get_value()
+test("Dit is een test")
