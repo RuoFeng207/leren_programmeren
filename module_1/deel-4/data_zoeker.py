@@ -8,7 +8,7 @@ def get_value(data: str, separator: str, position: int) -> str:
   if 0 <= position< len(waarde):
     return waarde [position] # read value at position of split_values
   else:
-    waarde = None
+   return None
   
 
 
@@ -32,4 +32,9 @@ test("naam verwacht Ahmed",verwacht,krijgt)
 verwacht = "Daan:6"
 krijgt = get_value(data,",",3)
 test("naam verwacht Daan",verwacht,krijgt)
+report()
+
+verwacht = None
+krijgt = get_value(data,",",22)
+test("None verwacht",verwacht,krijgt)
 report()
