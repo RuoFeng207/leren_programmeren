@@ -14,6 +14,9 @@ if operator=="-":
   code = getal1-getal2
 if operator =="x":
   code = getal1*getal2
+#def vijand
+def vijand(gevecht):
+   return gevecht
 
 
 
@@ -43,6 +46,7 @@ print("Dan zie je 2 deuren op een daar van staat kamer 3 en op de andere staat k
 print("Welke kamer neem jij?")
 kamer=input("Je neemt kamer: ")
 print("")
+while True:
 if kamer=="3":
     # === [kamer 3] === #
     #random voorwerp
@@ -60,8 +64,76 @@ if kamer=="3":
     print("Welke kamer kies jij?")
     kamer=input("Je neemt kamer:")
     print('')
-    time.sleep(4)
+    if kamer=="4":
+      print(f'Dapper met je nieuwe {item} loop je de kamer binnen.')
+      print("")
+    
+    
+      print('Je loopt tegen een man met zwaard aan.')
+      print(f"Je hebt {player_health} health punten,")
+      print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
+      print(f'Jou defnse is {player_defense} punten')
+      print("")
+
+      print(f"De man met zwaard heeft {vijand(gevecht=3)} health punten,")
+      print(f"Hij doet jou per aanval {vijand(gevecht=2)} punten schade toe ")
+      print(f'Zijn defense is {vijand(gevecht=0)} punten')
+      time.sleep(4)
+      vijand_hit_damage = (vijand(gevecht=0) - player_defense)
+      if vijand_hit_damage <= 0:
+          print('Jij hebt een te goede verdedigign voor de man met zwaard, hij kan je geen schade doen.')
+      else:
+          vijand_attack_amount = math.ceil(player_health / vijand_hit_damage)
+          
+          player_hit_damage = (player_attack - vijand(gevecht=0))
+          player_attack_amount = math.ceil(vijand(gevecht=2) / player_hit_damage)
+
+          if player_attack_amount < vijand_attack_amount:
+              print(f'In {player_attack_amount} rondes versla je de man met zwaard.')
+              print(f'Je health is nu {player_health}.')
+          else:
+              print('Helaas is de man met zwaard te sterk voor je.')
+              print('Game over.')
+              exit()
+
 elif kamer=="6":
+  print("")
+  print('Je loopt tegen een zombie aan.')
+  print(f"Je hebt {player_health} health punten,")
+  print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
+  print(f'Jou defnse is {player_defense} punten')
+  print("")   
+  time.sleep(2)
+  
+  print(f"De zombie heeft {vijand(gevecht=2)} health punten,")
+  print(f"Hij doet jou per aanval {vijand(gevecht=1)} punten schade toe ")
+  print(f'Zijn defense is {vijand(gevecht=0)} punten')
+  time.sleep(2)
+  print("")
+  vijand_hit_damage = (vijand(gevecht=0) - player_defense)
+  if vijand_hit_damage <= 0:
+      print('Jij hebt een te goede verdedigign voor de zombie, hij kan je geen schade doen.')
+  else:
+      zombie_attack_amount = math.ceil(player_health / vijand_hit_damage)
+      
+      player_hit_damage = (player_attack - vijand(gevecht=0))
+      player_attack_amount = math.ceil(vijand(gevecht=2) / player_hit_damage)
+
+      if player_attack_amount < zombie_attack_amount:
+          print(f'In {player_attack_amount} rondes versla je de zombie.')
+          print(f'Je health is nu {player_health}.')
+      else:
+          print('Helaas is de zombie te sterk voor je.')
+          print('Game over.')
+          exit()
+  print('')
+else:
+  print("Deze opie is niet mogelijk ")
+
+
+       
+       
+
    
   
   
