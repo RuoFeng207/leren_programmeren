@@ -19,27 +19,30 @@ if operator =="x":
 
 
 
-# === [kamer 1] === #
-print('Door de twee grote deuren loop je een gang binnen.')
-print('Het ruikt hier muf en vochtig.')
-print('Je ziet een deur voor je.')
-print('')
-time.sleep(3)
+# # === [kamer 1] === #
+# print('Door de twee grote deuren loop je een gang binnen.')
+# print('Het ruikt hier muf en vochtig.')
+# print('Je ziet een deur voor je.')
+# print('')
+# time.sleep(3)
 
-# === [kamer 2] === #
-print('Je stapt door de deur heen en je ziet een standbeeld voor je.')
-print('Het standbeeld heeft een sleutel vast.')
-print('Op zijn borst zit een numpad met de toesten 9 t/m 0.')
-print(f'Daarboven zie je een som staan {getal1}{operator}{getal2} ')
-while True:
-  andwoord =int(input("wat is jouw andwoord"))
-  if code != andwoord:
-    print("dit andwoord is niet corect.")
-    print("probeer het opnieuw.")
-  else:
-    print("Gelukt je hebt de code gekraakt!")
-    print('Het stadbeeld laat de sleutel vallen en je pakt het op')
-    break
+# # === [kamer 2] === #
+# print('Je stapt door de deur heen en je ziet een standbeeld voor je.')
+# print('Het standbeeld heeft een sleutel vast.')
+# print('Op zijn borst zit een numpad met de toesten 9 t/m 0.')
+# print(f'Daarboven zie je een som staan {getal1}{operator}{getal2}= ')
+# while True:
+#   andwoord =int(input("wat is jouw andwoord? "))
+#   if code != andwoord:
+#     print("dit andwoord is niet corect.")
+#     print("probeer het opnieuw.")
+#     print(f"{getal1}{operator}{getal2}=")
+   
+#   else:
+#     print("")
+#     print("Gelukt je hebt de code gekraakt!")
+#     print('Het stadbeeld laat de sleutel vallen en je pakt het op')
+#     break
 
 
 # print('Je zie een deur achter het standbeeld.')
@@ -55,19 +58,28 @@ if item =="schild":
 if item=="zwaart":
   player_attack +=2
 
-print('Je duwt hem open en stap een hele lange kamer binnen.')
-print(f'In deze kamer staat een tafel met daarop een {item}.')
-print(f'Je pakt het {item} op en houd het bij je.')
-print('Op naar de volgende deur.')
-print('')
-time.sleep(3)
+# print('Je duwt hem open en stap een hele lange kamer binnen.')
+# print(f'In deze kamer staat een tafel met daarop een {item}.')
+# print(f'Je pakt het {item} op en houd het bij je.')
+# print('Op naar de volgende deur.')
+# print('')
+# time.sleep(3)
 
 # === [kamer 4] === #
 zombie_attack = 1
 zombie_defense = 0
 zombie_health = 2
 print(f'Dapper met je nieuwe {item} loop je de kamer binnen.')
+
 print('Je loopt tegen een zombie aan.')
+print(f"Je hebt {player_health} health punten,")
+print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
+print(f'Jou defnse is {player_defense} punten')
+
+
+print(f"De zombie heeft {zombie_health} health punten,")
+print(f"Hij doet jouper aanval {zombie_attack} punten schade toe ")
+print(f'Zijn defnse is {zombie_defense} punten')
 
 zombie_hit_damage = (zombie_attack - player_defense)
 if zombie_hit_damage <= 0:
