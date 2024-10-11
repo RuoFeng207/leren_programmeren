@@ -70,89 +70,86 @@ if kamer=="3":
     print(f'Je pakt het {item} op en houd het bij je.')
     print('Dan zie je weer 2 deuren op de een staat kamer 4 en op de ander kamer 6.')
     print("Welke kamer kies jij?")
-    while True:
-      kamer=input("Je neemt kamer: ")
-      if kamer =="4":
-        break
-      elif kamer =="6":
-        break
-      else:
-        print("Deze optie is ongeldig probeer opnieuw")
-      print("")
-
-    if kamer=="4":
-      print(f'Dapper met je nieuwe {item} loop je de kamer binnen.')
-      print("")
     
-    
-      print('Je loopt tegen een man met zwaard aan.')
-      print(f"Je hebt {player_health} health punten,")
-      print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
-      print(f'Jou defense is {player_defense} punten')
-      print("")
 
-      print(f"De man met zwaard heeft {vijand(gevecht=3)} health punten,")
-      print(f"Hij doet jou per aanval {vijand(gevecht=2)} punten schade toe ")
-      print(f'Zijn defense is {vijand(gevecht=0)} punten')
-      time.sleep(4)
-      vijand_hit_damage = (vijand(gevecht=0) - player_defense)
-      if vijand_hit_damage <= 0:
-          print('Jij hebt een te goede verdedigign voor de man met zwaard, hij kan je geen schade doen.')
-      else:
-          vijand_attack_amount = math.ceil(player_health / vijand_hit_damage)
-          
-          player_hit_damage = (player_attack - vijand(gevecht=0))
-          player_attack_amount = math.ceil(vijand(gevecht=2) / player_hit_damage)
-
-          if player_attack_amount < vijand_attack_amount:
-              print(f'In {player_attack_amount} rondes versla je de man met zwaard.')
-              print(f'Je health is nu {player_health}.')
-          else:
-              print('Helaas is de man met zwaard te sterk voor je.')
-              print('Game over.')
-              exit()
-
-elif kamer=="6":
-  print("")
-  print('Je loopt tegen een zombie aan.')
-  print(f"Je hebt {player_health} health punten,")
-  print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
-  print(f'Jou defnse is {player_defense} punten')
-  print("")   
-  time.sleep(2)
-  
-  print(f"De zombie heeft {vijand(gevecht=2)} health punten,")
-  print(f"Hij doet jou per aanval {vijand(gevecht=1)} punten schade toe ")
-  print(f'Zijn defense is {vijand(gevecht=0)} punten')
-  time.sleep(2)
-  print("")
-  vijand_hit_damage = (vijand(gevecht=0) - player_defense)
-  if vijand_hit_damage <= 0:
-      print('Jij hebt een te goede verdedigign voor de zombie, hij kan je geen schade doen.')
-  else:
-      zombie_attack_amount = math.ceil(player_health / vijand_hit_damage)
       
-      player_hit_damage = (player_attack - vijand(gevecht=0))
-      player_attack_amount = math.ceil(vijand(gevecht=2) / player_hit_damage)
+    print(f'Dapper met je nieuwe {item} loop je de kamer binnen.')
+    print("")
+      
+      
+    print('Je loopt tegen een man met zwaard aan.')
+    print(f"Je hebt {player_health} health punten,")
+    print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
+    print(f'Jou defense is {player_defense} punten')
+    print("")
 
-      if player_attack_amount < zombie_attack_amount:
-          print(f'In {player_attack_amount} rondes versla je de zombie.')
-          print(f'Je health is nu {player_health}.')
-      else:
-          print('Helaas is de zombie te sterk voor je.')
-          print('Game over.')
-          exit()
-  print('')
+    print(f"De man met zwaard heeft {vijand(gevecht=3)} health punten,")
+    print(f"Hij doet jou per aanval {vijand(gevecht=2)} punten schade toe ")
+    print(f'Zijn defense is {vijand(gevecht=0)} punten')
+    time.sleep(4)
+    vijand_hit_damage = (vijand(gevecht=0) - player_defense)
+    if vijand_hit_damage <= 0:
+        print('Jij hebt een te goede verdedigign voor de man met zwaard, hij kan je geen schade doen.')
+    else:
+        vijand_attack_amount = math.ceil(player_health / vijand_hit_damage)
+        
+        player_hit_damage = (player_attack - vijand(gevecht=0))
+        player_attack_amount = math.ceil(vijand(gevecht=2) / player_hit_damage)
+
+        if player_attack_amount < vijand_attack_amount:
+            print(f'In {player_attack_amount} rondes versla je de man met zwaard.')
+            print(f'Je health is nu {player_health}.')
+        else:
+            print('Helaas is de man met zwaard te sterk voor je.')
+            print('Game over.')
+            exit()
+
+
+print("")
+print('Je loopt tegen een zombie aan.')
+print(f"Je hebt {player_health} health punten,")
+print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
+print(f'Jou defnse is {player_defense} punten')
+print("")   
+time.sleep(2)
+  
+print(f"De zombie heeft {vijand(gevecht=2)} health punten,")
+print(f"Hij doet jou per aanval {vijand(gevecht=1)} punten schade toe ")
+print(f'Zijn defense is {vijand(gevecht=0)} punten')
+time.sleep(2)
+print("")
+vijand_hit_damage = (vijand(gevecht=0) - player_defense)
+if vijand_hit_damage <= 0:
+    print('Jij hebt een te goede verdedigign voor de zombie, hij kan je geen schade doen.')
 else:
-  print("Deze keuze is niet mogelijk probeer opnieuw")
+    zombie_attack_amount = math.ceil(player_health / vijand_hit_damage)
+    
+    player_hit_damage = (player_attack - vijand(gevecht=0))
+    player_attack_amount = math.ceil(vijand(gevecht=2) / player_hit_damage)
+
+    if player_attack_amount < zombie_attack_amount:
+        print(f'In {player_attack_amount} rondes versla je de zombie.')
+        print(f'Je health is nu {player_health}.')
+    else:
+        print('Helaas is de zombie te sterk voor je.')
+        print('Game over.')
+        exit()
+print('')
+items = ['schild',"zwaart"]
+item = random.choice(items)
+if item =="schild":
+  player_defense += 1
+if item=="zwaart":
+  player_attack +=2
+
+print('Je duwt hem open en stap een hele lange kamer binnen.')
+print(f'In deze kamer staat een tafel met daarop een {item}.')
+print(f'Je pakt het {item} op en houd het bij je.')
+print('Op naar de volgende deur.')
+print('')
+time.sleep(4)
 
 
-      
-      
-
-   
-  
-  
 
 # print('Je zie een deur achter het standbeeld.')
 # print('')
