@@ -44,9 +44,17 @@ else:
 print("")
 print("Dan zie je 2 deuren op een daar van staat kamer 3 en op de andere staat kamer 6")
 print("Welke kamer neem jij?")
-kamer=input("Je neemt kamer: ")
-print("")
+
 while True:
+  kamer=input("Je neemt kamer: ")
+  if kamer =="3":
+    break
+  elif kamer =="6":
+    break
+  else:
+    print("Deze optie is ongeldig probeer opnieuw")
+  print("")
+
 if kamer=="3":
     # === [kamer 3] === #
     #random voorwerp
@@ -56,14 +64,22 @@ if kamer=="3":
         player_defense += 1
     if item=="zwaart":
         player_attack +=2
-
+    print("")    
     print('Je duwt hem open en stap een hele lange kamer binnen.')
     print(f'In deze kamer staat een tafel met daarop een {item}.')
     print(f'Je pakt het {item} op en houd het bij je.')
     print('Dan zie je weer 2 deuren op de een staat kamer 4 en op de ander kamer 6.')
     print("Welke kamer kies jij?")
-    kamer=input("Je neemt kamer:")
-    print('')
+    while True:
+      kamer=input("Je neemt kamer: ")
+      if kamer =="4":
+        break
+      elif kamer =="6":
+        break
+      else:
+        print("Deze optie is ongeldig probeer opnieuw")
+      print("")
+
     if kamer=="4":
       print(f'Dapper met je nieuwe {item} loop je de kamer binnen.')
       print("")
@@ -72,7 +88,7 @@ if kamer=="3":
       print('Je loopt tegen een man met zwaard aan.')
       print(f"Je hebt {player_health} health punten,")
       print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
-      print(f'Jou defnse is {player_defense} punten')
+      print(f'Jou defense is {player_defense} punten')
       print("")
 
       print(f"De man met zwaard heeft {vijand(gevecht=3)} health punten,")
@@ -128,11 +144,11 @@ elif kamer=="6":
           exit()
   print('')
 else:
-  print("Deze opie is niet mogelijk ")
+  print("Deze keuze is niet mogelijk probeer opnieuw")
 
 
-       
-       
+      
+      
 
    
   
