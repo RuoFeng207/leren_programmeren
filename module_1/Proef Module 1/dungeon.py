@@ -35,16 +35,16 @@ print(f'Daarboven zie je een som staan {getal1}{operator}{getal2}= ')
 andwoord =int(input("wat is jouw andwoord? "))
 if code != andwoord:
   print("dit andwoord is niet corect.")
-  
+  time.sleep(3)
 else:
   print("")
   print("Gelukt je hebt de code gekraakt!")
   print('Het stadbeeld laat de sleutel vallen en je pakt het op')
-  
+  time.sleep(5)
 
 print('Je zie een deur achter het standbeeld.')
 print('')
-time.sleep(5)
+
 
 # === [kamer 3] === #
 #random voorwerp
@@ -73,7 +73,7 @@ print(f"Je hebt {player_health} health punten,")
 print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
 print(f'Jou defnse is {player_defense} punten')
 print("")
-time.sleep(4)
+time.sleep(2)
 
 print(f"De zombie heeft {zombie_health} health punten,")
 print(f"Hij doet jou per aanval {zombie_attack} punten schade toe ")
@@ -96,14 +96,14 @@ else:
         print('Game over.')
         exit()
 print('')
-time.sleep(4)
+time.sleep(3)
 
 # === [kamer 5] === #
 print('Voorzichtig open je de deur, je wilt niet nog een zombie tegenkomen.')
 print('Tot je verbazig zie je een schatkist in het midden van de kamer staan.')
 print('Je loopt er naartoe.')
 print("Je probeert hem te open en maar...")
-time.sleep(4)
+time.sleep(1)
 print("Hij zit op slot! ")
 if code== andwoord:
    print("Opeens herinner je je de sluitel die je hebt meegenomen uit kamer 2 ")
