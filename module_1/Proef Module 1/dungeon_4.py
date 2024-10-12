@@ -48,7 +48,7 @@ else:
   print("")
   print("Gelukt je hebt de code gekraakt!")
   print('Het stadbeeld laat de sleutel vallen en je pakt het op')
-# print("")
+print("")
 print("Dan zie je 2 deuren op een daar van staat kamer 3 en op de andere staat kamer 6")
 print("Welke kamer neem jij?")
 
