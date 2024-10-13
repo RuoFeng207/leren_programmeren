@@ -17,7 +17,7 @@ if operator =="x":
 #def vijand
 def vijand(gevecht):
    return gevecht
-
+#kamer_3
 
 
 # === [kamer 1] === #
