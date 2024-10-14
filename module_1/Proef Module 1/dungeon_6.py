@@ -22,12 +22,10 @@ rupee =1
 def vijand(gevecht):
    return gevecht
 #kamer 8
-print(player_health) 
-print(rupee) 
 gedobbeld = random.randint(1,12)
 def kamer_8(rupee:int,player_health:int)->int:
     print("Je komt in een kamer en ziet een gokmachien")
-    print("Er saat een bortje bij ")
+    print("Er staat een bortje bij ")
     print("----------------------------De spel regels-----------------------------")
     print("Als het aantal ogen groter is dan 7 winst is aantal rupees x 2")
     print("Als het aantal ogen minder is dan 7 verlis is rupee en player health -1")
@@ -44,7 +42,9 @@ def kamer_8(rupee:int,player_health:int)->int:
           print("Deze optie is niet geldig je moet ja of nee antwoorden")
         
     if gebruik=="ja":
+        print("")
         print(f"Je inzet is {rupee} rupee en {player_health} player health punten")
+        time.sleep(1)
     
         if gedobbeld <7:
             player_health=player_health-1
@@ -55,7 +55,7 @@ def kamer_8(rupee:int,player_health:int)->int:
         elif gedobbeld>7:
             rupee=rupee*2
             print(f"Je goeide een {gedobbeld}!")
-            print(f"gefeliciteerd je hebt gewonennen je hebt nu{rupee} aantal rupees ")
+            print(f"gefeliciteerd je hebt gewonennen je hebt nu {rupee} rupees ")
 
         else:
             player_health+4
