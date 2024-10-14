@@ -60,12 +60,12 @@ def kamer_3(rupee:int):
       print("Je besluit niks te kopen en loopt door")
       return rupee
 
-# # === [kamer 1] === #
-# print('Door de twee grote deuren loop je een gang binnen.')
-# print('Het ruikt hier muf en vochtig.')
-# print('Je ziet een deur voor je.')
-# print('')
-# time.sleep(4)
+# === [kamer 1] === #
+print('Door de twee grote deuren loop je een gang binnen.')
+print('Het ruikt hier muf en vochtig.')
+print('Je ziet een deur voor je.')
+print('')
+time.sleep(4)
 
 # === [kamer 7] === #
 print("Je doet hem open en ziet iets schitteren een rupee!")
