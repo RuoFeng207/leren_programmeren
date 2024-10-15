@@ -18,7 +18,7 @@ if operator =="x":
 #Goblin zooi
 items = ['schild',"zwaart","sleutel"]
 rupee =0
-
+schatkist =False
 
 # def vijand
 def vijand(gevecht):
@@ -144,7 +144,7 @@ if kamer == "2":
     else:
         print("")
         print("Gelukt je hebt de code gekraakt!")
-        print('Het stadbeeld laat zijn rupee vallen en je pakt  op')
+        print('Het stadbeeld laat zijn rupee vallen en je pakt hem op')
         rupee=rupee+1
         print(f"je hebt nu {rupee} rupee(s) in je inventory")
 
@@ -225,7 +225,7 @@ while True:
     if kopen =="ja":
 
       while True:
-        teller =0
+        
         print(f"je kan kiezen uit {items}")
         
         item = input("Wat kies je? ")
@@ -234,7 +234,7 @@ while True:
         elif item=="zwaart":
            player_attack=+1
         elif item =="sleutel":
-           sleutel=item
+           schatkist= True
         print("")
         item=item.lower()
         if item in items:
@@ -302,7 +302,7 @@ print("Je probeert hem te open en maar...")
 time.sleep(2)
 print("")
 print("Hij zit op slot! ")
-if sleutel:
+if schatkist==True:
    print("Opeens herinner je je de sluitel die je hebt gekocht bij de goblin ")
    print("Je probeert hem uit en... HIJ PAST!")
    print("Je neemt de buit mee")
