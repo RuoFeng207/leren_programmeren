@@ -123,74 +123,74 @@ def kamer_4():
           exit()
 
 # #===[kamer 6]===#
-# def kamer_6():
-#   print("")
-#   print("Je gaat de kamer in en")
-#   print('Je loopt tegen een zombie aan.')
-#   print(f"Je hebt {player_health} health punten,")
-#   print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
-#   print(f'Jou defense is {player_defense} punten')
-#   print("")   
-#   time.sleep(4)
+def kamer_6():
+  print("")
+  print("Je gaat de kamer in en")
+  print('Je loopt tegen een zombie aan.')
+  print(f"Je hebt {player_health} health punten,")
+  print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
+  print(f'Jou defense is {player_defense} punten')
+  print("")   
+  time.sleep(4)
     
-#   print(f"De zombie heeft {vijand(gevecht=2)} health punten,")
-#   print(f"Hij doet jou per aanval {vijand(gevecht=1)} punten schade toe ")
-#   print(f'Zijn defense is {vijand(gevecht=0)} punten')
-#   time.sleep(4)
-#   print("")
-#   vijand_hit_damage = (vijand(gevecht=0) - player_defense)
-#   if vijand_hit_damage <= 0:
-#       print('Jij hebt een te goede verdedigign voor de zombie, hij kan je geen schade doen.')
-#   else:
-#       zombie_attack_amount = math.ceil(player_health / vijand_hit_damage)
+  print(f"De zombie heeft {vijand(gevecht=2)} health punten,")
+  print(f"Hij doet jou per aanval {vijand(gevecht=1)} punten schade toe ")
+  print(f'Zijn defense is {vijand(gevecht=0)} punten')
+  time.sleep(4)
+  print("")
+  vijand_hit_damage = (vijand(gevecht=0) - player_defense)
+  if vijand_hit_damage <= 0:
+      print('Jij hebt een te goede verdedigign voor de zombie, hij kan je geen schade doen.')
+  else:
+      zombie_attack_amount = math.ceil(player_health / vijand_hit_damage)
       
-#       player_hit_damage = (player_attack - vijand(gevecht=0))
-#       player_attack_amount = math.ceil(vijand(gevecht=2) / player_hit_damage)
+      player_hit_damage = (player_attack - vijand(gevecht=0))
+      player_attack_amount = math.ceil(vijand(gevecht=2) / player_hit_damage)
 
-#       if player_attack_amount < zombie_attack_amount:
-#           print(f'In {player_attack_amount} rondes versla je de zombie.')
-#           print(f'Je health is nu {player_health}.')
-#       else:
-#           print('Helaas is de zombie te sterk voor je.')
-#           print('Game over.')
-#           exit()
+      if player_attack_amount < zombie_attack_amount:
+          print(f'In {player_attack_amount} rondes versla je de zombie.')
+          print(f'Je health is nu {player_health}.')
+      else:
+          print('Helaas is de zombie te sterk voor je.')
+          print('Game over.')
+          exit()
 
-# #===[kamer 7]===#
-# def kamer_7(rupee:int):
-#    print("Je doet hem open en ziet iets schitteren een rupee!")
-#    rupee +=1
-#    print("Je loopt er heen en pakt hem op")
-#    print(f"je hebt nu {rupee} rupee(s) in je inventory")
-#    print("")
-#    time.sleep(3)
-#    return rupee
+#===[kamer 7]===#
+def kamer_7(rupee:int):
+   print("Je doet hem open en ziet iets schitteren een rupee!")
+   rupee +=1
+   print("Je loopt er heen en pakt hem op")
+   print(f"je hebt nu {rupee} rupee(s) in je inventory")
+   print("")
+   time.sleep(3)
+   return rupee
 
-# #===[Kamer 1]===#
-# print('Door de twee grote deuren loop je een gang binnen.')
-# print('Het ruikt hier muf en vochtig.')
-# print('Je ziet een deur voor je.')
-# print('')
-# time.sleep(4)
-# #===[kamer 7]===#
-# print(kamer_7(rupee))
-# print("Je kijkt wat beter rond en ziet 2 deuren, een gaat naar kamer 2 en de ander naar kamer 3")
-# print ("Welke kamer kies je?")
+#===[Kamer 1]===#
+print('Door de twee grote deuren loop je een gang binnen.')
+print('Het ruikt hier muf en vochtig.')
+print('Je ziet een deur voor je.')
+print('')
+time.sleep(4)
+#===[kamer 7]===#
+print(kamer_7(rupee))
+print("Je kijkt wat beter rond en ziet 2 deuren, een gaat naar kamer 2 en de ander naar kamer 3")
+print ("Welke kamer kies je?")
 
-# while True:
-#   deur=input("Je neemt deur: ")
-#   if deur =="2":
-#     break
-#   elif deur =="3":
-#     break
-#   else:
-#     print("Deze optie is ongeldig probeer opnieuw")
-#   print("")
-# # === [kamer 2] === #
-# if deur =='2':
-#    print(kamer_2())
-# # === [kamer 2] === #
-# elif deur =="3":
-#    print(kamer_3(rupee=rupee))
+while True:
+  deur=input("Je neemt deur: ")
+  if deur =="2":
+    break
+  elif deur =="3":
+    break
+  else:
+    print("Deze optie is ongeldig probeer opnieuw")
+  print("")
+# === [kamer 2] === #
+if deur =='2':
+   print(kamer_2())
+# === [kamer 2] === #
+elif deur =="3":
+   print(kamer_3(rupee=rupee))
 
    
 
