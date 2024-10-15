@@ -16,7 +16,7 @@ if operator =="x":
   code = getal1*getal2
 
 #Goblin zooi
-items = ['schild',"zwaart","sleutel"]
+items = ['schild',"zwaard","sleutel"]
 rupee =0
 schatkist =False
 
@@ -51,7 +51,7 @@ def kamer_3(rupee):
           item = input("Wat kies je? ")
           if item == "schild":
             player_defense=+1
-          elif item=="zwaart":
+          elif item=="zwaard":
             player_attack=+1
           elif item =="sleutel":
             schatkist= True
