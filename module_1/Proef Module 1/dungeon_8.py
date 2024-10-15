@@ -107,7 +107,6 @@ def kamer_7(rupee):
       print("Welke kamer neem jij?")
       print("")
       
-      
 
 
 #kamer 8
@@ -163,6 +162,22 @@ def kamer_8(rupee:int,player_health:int)->int:
         elif "nee":
             print("Het lijkt je veel te riskant en je loopt door.")
             break
+    print("Je ziet 2 deuren naar 2 nieuwe kamers een gaat naar kamer 3 en de ander naar kamer 9")
+    print("Welke kamer neem je?")
+    while True:
+       kamer=input("Je neemt kamer: ")
+       if kamer =="3":
+          break
+       elif kamer =="9":
+          break
+       else:
+          print("Deze optie is ongeldig probeer opnieuw")
+          print("")
+    if kamer== "3":
+       print(kamer_3(rupee))
+    elif kamer=="9":
+       print(kamer_9(player_health,player_defense))   
+       print(kamer_3(rupee))
      
 #===[kamer 9]===#
 def kamer_9(player_health,player_defense):
@@ -260,78 +275,36 @@ if kamer == "2":
             print(f'In {player_attack_amount} rondes versla je de zombie.')
             print(f'Je health is nu {player_health}.')
             print(kamer_8(rupee=rupee,player_health=player_health))
+            print("")
         else:
             print('Helaas is de zombie te sterk voor je.')
             print('Game over.')
             exit()
-        
+    print("Je ziet 2 nieuwe deuren een naar 3 en de ander naar kamer 8")
+    print("Welke kamer neem je?")
+    while True:
+        kamer=input("Je neemt kamer: ")
+        if kamer =="3":
+            break
+        elif kamer =="8":
+            break
+        else:
+            print("Deze optie is ongeldig probeer opnieuw")
+            print("")
+    if kamer == "3":
+       print(kamer_3(rupee))
+    elif kamer=="8":
+       print(kamer_8(rupee))
+
+       
 else:
   antwoord = quit
-#kamer 8
-print(kamer_8(rupee=rupee,player_health=player_health))
-#kamer 9
+  #kamer 8
+  print(kamer_8(rupee=rupee,player_health=player_health))
+  #kamer 9
 print(kamer_9(player_health,player_defense))
 #===[kamer 3]===#
-print("")
-print("Je stapt een grote kamer binnen, en je ziet een kraampje met daar achter een goblin.")
-print("Op het bordje er naast staat wapens 1 rupee.")
-while True:
-    #kopen 
-    while True:
-     
-      kopen = input("Wil je wapens kopen bij de goblin? ")
-      kopen=kopen.lower()
-      if kopen =="ja":
-        break
-      elif kopen =="nee":
-        break
-      else: 
-        print("Deze optie is niet geldig je moet ja of nee antwoorden")
-
-
-    if kopen =="ja":
-
-      while True:
-        
-        print(f"je kan kiezen uit {items}")
-        
-        item = input("Wat kies je? ")
-        if item == "schild":
-           player_defense=+1
-        elif item=="zwaart":
-           player_attack=+1
-        elif item =="sleutel":
-           schatkist= True
-        print("")
-        item=item.lower()
-        if item in items:
-          break
-        else:
-          print("De goblin verkoopt dit voorwerp niet")
-
-      if item in items:
-        rupee -=1
-        items.remove(item)
-        print(f"Je hebt een {item} gekocht en hebt {rupee} rupee(s) over")
-        
-        if items ==[]:
-          uitverkocht =print("De goblin is uit verkocht")
-          print("")
-          print("Blij met je nieuwe  spullen loop je veder")
-          print("")
-          break
-        else:
-          if rupee>=1:
-            print("Wil je nog wat kopen")
-          else:
-             print("O het lijt er op dat je geen rupees meer hebt")
-             print("Je kan dus niks meer kopen.")
-             print("bij met je nieuwe aankoop(en) loop je veder")
-             break
-
-    elif kopen =="nee":
-      print("Je besluit niks te kopen en loopt door")
-      break
+print(kamer_3(rupee))
 # #===[kamer 4]===#
 print('Je loopt tegen een man met zwaard aan.')
 print(f"Je hebt {player_health} health punten,")
