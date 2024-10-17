@@ -25,8 +25,29 @@ if operator =="x":
 items = ['schild',"zwaard","sleutel"]
 rupee =0
 schatkist =False
-#gevecht 
-x =3
+#gevecht
+def vijand(vijand:str,vijand_health: int, vijand_attack:int,vijand_defense:int)->str:
+    print(f"De {vijand} heeft {vijand_health} health punten")
+    print(f"Hij doet je per aanval {vijand_attack} punte schade toe")
+    print(f"En hij heeft {vijand_defense} defense punten")
+    print("")
+    time.sleep(2)
+    zombie_hit_damage = (vijand_attack - player_defense)
+    if zombie_hit_damage <= 0:
+        print('Jij hebt een te goede verdedigign voor de zombie, hij kan je geen schade doen.')
+    else:
+        zombie_attack_amount = math.ceil(player_health / zombie_hit_damage)
+    
+        player_hit_damage = (player_attack - vijand_defense)
+        player_attack_amount = math.ceil(vijand_health / player_hit_damage)
+
+        if player_attack_amount < zombie_attack_amount:
+            print(f'In {player_attack_amount} rondes versla je de {vijand}.')
+            print(f'Je health is nu {player_health}.')
+        else:
+            print(f'Helaas is de {vijand} te sterk voor je.')
+            print('Game over.')
+            exit()
 
 # === [kamer 1] === #
 print('Door de twee grote deuren loop je een gang binnen.')
@@ -79,6 +100,7 @@ if kamer_2== True:
   antwoord =int(input("wat is jouw andwoord? "))
   if code != antwoord:
       print("dit antwoord is niet corect.")
+      print("")
       time.sleep(2)
   else:
       print("")
@@ -107,38 +129,14 @@ if kamer_2== True:
 #===[kamer 6]===#
 if kamer_6 == True:
   print("")
-  print("Je gaat de kamer in en")
   print('Je loopt tegen een zombie aan.')
   print(f"Je hebt {player_health} health punten,")
   print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
-  print(f'Jou defense is {player_defense} punten')
-  print("")   
-  time.sleep(4)
-
-  print(f"De zombie heeft {x} health punten,")
-  print(f"Hij doet jou per aanval {x} punten schade toe ")
-  print(f'Zijn defense is {x} punten')
-  time.sleep(4)
+  print(f'Jou defnse is {player_defense} punten')
   print("")
-  vijand_hit_damage = (x - player_defense)
-  if vijand_hit_damage <= 0:
-    print('Jij hebt een te goede verdedigign voor de zombie, hij kan je geen schade doen.')
+  time.sleep(2)
 
-  else:
-    zombie_attack_amount = math.ceil(player_health / vijand_hit_damage)
-      
-  player_hit_damage = (player_attack - x)
-  player_attack_amount = math.ceil(x / player_hit_damage)
-
-  if player_attack_amount < zombie_attack_amount:
-      print(f'In {player_attack_amount} rondes versla je de zombie.')
-      print(f'Je health is nu {player_health}.')
-
-      print("")
-  else:
-      print('Helaas is de zombie te sterk voor je.')
-      print('Game over.')
-      exit()
+  vijand("Zombie",2,1,0)
   print("Je ziet 2 nieuwe deuren een naar 3 en de ander naar kamer 8")
   print("Welke kamer neem je?")
 
@@ -203,7 +201,7 @@ if kamer_8== True:
               player_health+4
               rupee=+1
               print(f"Je goeide een {gedobbeld}!")
-              print(f"gefeliciteerd je hebt gewonennen je hebt nu{rupee} aantal rupees en {player_health} player health punten")
+              print(f"gefeliciteerd je hebt gewonennen je hebt nu {rupee} aantal rupees en {player_health} player health punten")
       
       elif "nee":
           print("Het lijkt je veel te riskant en je loopt door.")
@@ -262,11 +260,16 @@ if kamer_9 == True:
           
           item = input("Wat kies je? ")
           if item == "schild":
-            player_defense=+1
+            player_defense=player_defense+1
+            print("Je hebt een schild gekocht je defense gaat met +1 omhoog ")
+            print(f"Je kijkt naar je defense bar en ziet dat je {player_defense} punen hebt")
           elif item=="zwaard":
-            player_attack=+1
+            player_attack=player_attack+2
+            print("Je hebt een zwaart gekocht je attack gaat met +2 omhoog ")
+            print(f"Met dit zwaart ben je veel sterker je attack is nu {player_attack} punten")
           elif item =="sleutel":
             schatkist= True
+            print("Je hebt een sleutel gekocht mischien komt het nog van pas")
           print("")
           item=item.lower()
           if item in items:
@@ -277,7 +280,7 @@ if kamer_9 == True:
         if item in items:
           rupee -=1
           items.remove(item)
-          print(f"Je hebt een {item} gekocht en hebt {rupee} rupee(s) over")
+          
           
           if items ==[]:
             uitverkocht =print("De goblin is uit verkocht")
@@ -289,7 +292,7 @@ if kamer_9 == True:
             if rupee>=1:
               print("Wil je nog wat kopen")
             else:
-              print("O het lijt er op dat je geen rupees meer hebt")
+              print("O het lijkt er op dat je geen rupees meer hebt")
               print("Je kan dus niks meer kopen.")
               print("bij met je nieuwe aankoop(en) loop je veder")
               break
@@ -298,32 +301,16 @@ if kamer_9 == True:
         print("Je besluit niks te kopen en loopt door")
         break
 # #===[kamer 4]===#
-print('Je loopt tegen een man met zwaard aan.')
-print(f"Je hebt {player_health} health punten,")
-print(f"Je doet de man met zwaard per aanval {player_attack} punten schade toe ")
-print(f'Jou defense is {player_defense} punten')
 print("")
+print('Je loopt tegen een zombie aan.')
+print(f"Je hebt {player_health} health punten,")
+print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
+print(f'Jou defnse is {player_defense} punten')
+time.sleep(2)
+print("")
+print("Je loop een lange gang door en opend de volgende deur")
+vijand("Man met zwaart",3,2,0)
 
-print(f"De man met zwaard heeft {x} health punten,")
-print(f"Hij doet jou per aanval {x} punten schade toe ")
-print(f'Zijn defense is {x} punten')
-time.sleep(4)
-vijand_hit_damage = (x - player_defense)
-if vijand_hit_damage <= 0:
-    print('Jij hebt een te goede verdedigign voor de man met zwaard, hij kan je geen schade doen.')
-else:
-    vijand_attack_amount = math.ceil(player_health / vijand_hit_damage)
-    
-    player_hit_damage = (player_attack - x)
-    player_attack_amount = math.ceil(x / player_hit_damage)
-
-    if player_attack_amount < vijand_attack_amount:
-        print(f'In {player_attack_amount} rondes versla je de man met zwaard.')
-        print(f'Je health is nu {player_health}.')
-    else:
-        print('Helaas is de man met zwaard te sterk voor je.')
-        print('Game over.')
-        exit()
 #===[kamer 5]===#
 time.sleep(3)
 print("")
