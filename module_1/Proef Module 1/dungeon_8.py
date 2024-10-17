@@ -85,7 +85,7 @@ def kamer_3(rupee):
       elif kopen =="nee":
         print("Je besluit niks te kopen en loopt door")
         break
-      return player_defense,player_attack,schatkist,uitverkocht
+      return player_defense,player_attack,schatkist,uitverkocht,
 
 #kamer 7
 def kamer_7(rupee):
