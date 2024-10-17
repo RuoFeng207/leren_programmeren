@@ -280,6 +280,7 @@ if kamer_9 == True:
         if item in items:
           rupee -=1
           items.remove(item)
+          print(f"Je hebt nog {rupee} rupee(s) over ")
           
           
           if items ==[]:
@@ -302,13 +303,12 @@ if kamer_9 == True:
         break
 # #===[kamer 4]===#
 print("")
-print('Je loopt tegen een zombie aan.')
-print(f"Je hebt {player_health} health punten,")
-print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
-print(f'Jou defnse is {player_defense} punten')
 time.sleep(2)
 print("")
 print("Je loop een lange gang door en opend de volgende deur")
+print(f"Je hebt {player_health} health punten,")
+print(f"Je doet de zombie per aanval {player_attack} punten schade toe ")
+print(f'Jou defnse is {player_defense} punten')
 vijand("Man met zwaart",3,2,0)
 
 #===[kamer 5]===#
