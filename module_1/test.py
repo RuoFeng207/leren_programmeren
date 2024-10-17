@@ -1,6 +1,6 @@
-# def test(Naam): #functie, parameter
-#     print("Hallo",Naam) #print string parameter
-# test("jan") #argument
+def test(Naam:str,jaar:int)-> str: #functie, parameter
+    print(f"Hallo{Naam} en ben {jaar} jaar oud") #print string parameter
+test("jan",12) #argument
 
 
 def getal(getal1: int, getal2:int)-> int:
@@ -25,5 +25,5 @@ print(aanval(defense=1,health=2,attack=3))
 def kamer(deur_1:str):
     return deur_1
     
-  
+
 
