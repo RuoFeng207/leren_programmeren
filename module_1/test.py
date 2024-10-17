@@ -24,6 +24,8 @@ print(aanval(defense=1,health=2,attack=3))
 
 def kamer(deur_1:str):
     return deur_1
+
+def vijand()
     
 
 
