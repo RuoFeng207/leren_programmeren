@@ -254,8 +254,9 @@ def kamer_3(rupee):
         break
   else:
     print("Het lijkt er op dat je geen rupees hebt")
+    return rupee
 
-print(kamer_3(rupee))
+kamer_3(rupee)
 
 
 
