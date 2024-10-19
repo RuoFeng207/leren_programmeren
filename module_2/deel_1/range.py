@@ -1,3 +1,3 @@
-vraag= int(input("Hoeveel lijsten wilt u zien? "))
-for lijst in range(vraag):
-    int(input(f"Hoelang moet lijst {vraag} zijn? "))
+lijst = int(input("Hoeveel lijsten wilt u zien? "))
+for i in range(1,lijst+1):
+    int(input(f"Hoelang moet lijst {i} zijn "))
