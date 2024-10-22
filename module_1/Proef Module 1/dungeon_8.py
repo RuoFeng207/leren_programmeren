@@ -234,73 +234,73 @@ if kamer_9 == True:
     print(f"Je kijt naar je defense bar en ziet dat je {player_defense} defense punten hebt")
   time.sleep(3)
 
-  #===[kamer 3]===#
-  print("")
-  print("Je stapt een grote kamer binnen, en je ziet een kraampje met daar achter een goblin.")
-  print("Op het bordje er naast staat wapens 1 rupee.")
-  while True:
-      #kopen 
-      while True:
-      
-        kopen = input("Wil je wapens kopen bij de goblin? ")
-        kopen=kopen.lower()
-        if kopen =="ja":
-          break
-        elif kopen =="nee":
-          break
-        else: 
-          print("Deze optie is niet geldig je moet ja of nee antwoorden")
-
-
+#===[kamer 3]===#
+print("")
+print("Je stapt een grote kamer binnen, en je ziet een kraampje met daar achter een goblin.")
+print("Op het bordje er naast staat wapens 1 rupee.")
+while True:
+    #kopen 
+    while True:
+    
+      kopen = input("Wil je wapens kopen bij de goblin? ")
+      kopen=kopen.lower()
       if kopen =="ja":
-
-        while True:
-          
-          print(f"je kan kiezen uit {items}")
-          
-          item = input("Wat kies je? ")
-          if item == "schild":
-            player_defense=player_defense+1
-            print("Je hebt een schild gekocht je defense gaat met +1 omhoog ")
-            print(f"Je kijkt naar je defense bar en ziet dat je {player_defense} punen hebt")
-          elif item=="zwaard":
-            player_attack=player_attack+2
-            print("Je hebt een zwaart gekocht je attack gaat met +2 omhoog ")
-            print(f"Met dit zwaart ben je veel sterker je attack is nu {player_attack} punten")
-          elif item =="sleutel":
-            schatkist= True
-            print("Je hebt een sleutel gekocht mischien komt het nog van pas")
-          print("")
-          item=item.lower()
-          if item in items:
-            break
-          else:
-            print("De goblin verkoopt dit voorwerp niet")
-
-        if item in items:
-          rupee -=1
-          items.remove(item)
-          print(f"Je hebt nog {rupee} rupee(s) over ")
-          
-          
-          if items ==[]:
-            uitverkocht =print("De goblin is uit verkocht")
-            print("")
-            print("Blij met je nieuwe  spullen loop je veder")
-            print("")
-            break
-          else:
-            if rupee>=1:
-              print("Wil je nog wat kopen")
-            else:
-              print("O het lijkt er op dat je geen rupees meer hebt")
-              print("Je kan dus niks meer kopen.")
-              print("bij met je nieuwe aankoop(en) loop je veder")
-              break
-
-      elif kopen =="nee":
-        print("Je besluit niks te kopen en loopt door")
         break
+      elif kopen =="nee":
+        break
+      else: 
+        print("Deze optie is niet geldig je moet ja of nee antwoorden")
+
+
+    if kopen =="ja":
+
+      while True:
+        
+        print(f"je kan kiezen uit {items}")
+        
+        item = input("Wat kies je? ")
+        if item == "schild":
+          player_defense=player_defense+1
+          print("Je hebt een schild gekocht je defense gaat met +1 omhoog ")
+          print(f"Je kijkt naar je defense bar en ziet dat je {player_defense} punen hebt")
+        elif item=="zwaard":
+          player_attack=player_attack+2
+          print("Je hebt een zwaart gekocht je attack gaat met +2 omhoog ")
+          print(f"Met dit zwaart ben je veel sterker je attack is nu {player_attack} punten")
+        elif item =="sleutel":
+          schatkist= True
+          print("Je hebt een sleutel gekocht mischien komt het nog van pas")
+        print("")
+        item=item.lower()
+        if item in items:
+          break
+        else:
+          print("De goblin verkoopt dit voorwerp niet")
+
+      if item in items:
+        rupee -=1
+        items.remove(item)
+        print(f"Je hebt nog {rupee} rupee(s) over ")
+        
+        
+        if items ==[]:
+          uitverkocht =print("De goblin is uit verkocht")
+          print("")
+          print("Blij met je nieuwe  spullen loop je veder")
+          print("")
+          break
+        else:
+          if rupee>=1:
+            print("Wil je nog wat kopen")
+          else:
+            print("O het lijkt er op dat je geen rupees meer hebt")
+            print("Je kan dus niks meer kopen.")
+            print("bij met je nieuwe aankoop(en) loop je veder")
+            break
+
+    elif kopen =="nee":
+      print("Je besluit niks te kopen en loopt door")
+      break
 # #===[kamer 4]===#
 print("")
 time.sleep(2)
