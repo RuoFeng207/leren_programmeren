@@ -1,20 +1,19 @@
-# In een klein dorpje woonde een oude man die prachtige houten speelgoed maakte. Op een dag ontdekte hij een vergeten zolder vol met oude, magische houtsoorten. Terwijl hij aan het werk was, kwam er een levendig paard tevoorschijn uit een van de blokken. Het paard nam de oude man mee op een avontuurlijke reis
-# verhaal= input("voer hier je verhaal in: ")
-# split_verhaal = verhaal.split()
-# print(split_verhaal)
-# woord_1 = split_verhaal[2] 
-# print(woord_1)
-# d = {"":woord_1,"":"groot"}
-# print(d)
-# print(split_verhaal)
+# #In een klein dorp aan de voet van een grote berg stond een mysterieuze grot. De grot was omgeven door hoge bomen en had een ingang die glinsterde in het zonlicht. Op een dag besloot een dappere jongen het avontuur aan te gaan en de grot te verkennen. Binnenin ontdekte hij prachtige, witte kristallen die de wanden sierden. Verbluft door de schoonheid, wist hij dat hij een geheim had ontdekt dat het dorp voor altijd zou veranderen.
 
-# Using curly braces
-my_dict = {
-    'name': 'Alice',
-    'age': 30,
-    'city': 'New York'
-}
+# Vraag de gebruiker om een verhaal in te voeren
+verhaal = input("Voer hier je verhaal in: ")
 
-# Using the dict() constructor
-my_dict2 = dict(name='Bob', age=25, city='Los Angeles')
-print(my_dict2)
+# Split het verhaal meerdere strings
+split_verhaal = verhaal.split()
+
+# Woorden die vervangen moeten worden
+woorden = {"klein":"groot","witte":"zwartte","dorp":"stad","grot": "flat","grote":"groot","berg":"dal"}
+# Vervang de woorden in het verhaal
+vervangen_verhaal = [woorden.get(woord,woord) for woord in split_verhaal]
+
+# Maak het verhaal weer een string
+nieuw_verhaal = ' '.join(vervangen_verhaal)
+
+# Print het nieuwe verhaal
+print("")
+print("Het nieuwe verhaal is:", nieuw_verhaal)
