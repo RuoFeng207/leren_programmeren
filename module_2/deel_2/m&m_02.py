@@ -24,3 +24,5 @@ for x in range(hoeveel):
 
 
 print(zak)
+#if blauw 
+#add oranje
