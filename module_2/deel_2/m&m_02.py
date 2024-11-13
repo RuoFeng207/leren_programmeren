@@ -16,13 +16,17 @@ zak ={}
 
 for x in range(hoeveel):
     kleur = ["rood", "blauw", "groen", "geel", "bruin"]
-    kleur = random.choice(kleur)
-    if kleur in zak:
-        zak[kleur] +=1
+    keus = random.choice(kleur)
+    if keus =="blauw":
+        kleur.append("oranje")
+        if "oranje" in zak:
+            zak["oranje"]+=1
+        else:
+            zak["oranje"]=1
+    if keus in zak:
+        zak[keus] +=1
     else:
-        zak[kleur]= 1
+        zak[keus]= 1
 
 
 print(zak)
-#if blauw 
-#add oranje
