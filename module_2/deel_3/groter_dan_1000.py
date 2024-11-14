@@ -7,9 +7,11 @@ for x in range(10):
     getal+=1  
     var = ""
     for y in lijst:
-        var+=(f"{y} ")
-    lijst.append("+")
-    
+        if x>0:
+            var+=(f"+{y} ")
     #berekenen
-    som = 2
-    print(f"{var} = {som}")     
+    if x >0:
+
+        som =sum(lijst)
+        print(f"{var}= {som}")     
+
