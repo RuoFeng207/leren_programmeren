@@ -1,17 +1,25 @@
 lijst=[]
 getal = 50
+num =0
 #visueel
-for x in range(10):
+while True:
     lijst.append(getal) #toevoegen lijst
 
-    getal+=1  
+    getal+=1
+    num+=1
     var = ""
+    teller =0
     for y in lijst:
-        if x>0:
-            var+=(f"+{y} ")
+        if teller==0:
+            var +=(f"{y}")
+        else:var+=(f"+ {y} ")
+        teller+=1
     #berekenen
-    if x >0:
+   
 
-        som =sum(lijst)
-        print(f"{var}= {som}")     
+    som =sum(lijst)
+    print(f"{num}. {var}= {som}")  
+    if som>1000:
+        break   
 
+#zoek uit teller
