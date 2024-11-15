@@ -1,5 +1,5 @@
-lijst=[]
-getal = 50
+lijst=[50]
+getal = 51
 num =0
 #visueel
 while True:
@@ -12,7 +12,8 @@ while True:
     for y in lijst:
         if teller==0:
             var +=(f"{y}")
-        else:var+=(f"+ {y} ")
+        else:
+            var+=(f"+ {y} ")
         teller+=1
     #berekenen
    
