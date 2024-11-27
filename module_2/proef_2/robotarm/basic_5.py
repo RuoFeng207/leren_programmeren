@@ -13,6 +13,8 @@ coller=robotArm.scan()
 if coller=="red":
     robotArm.moveLeft()
     robotArm.drop()
+elif coller =="green":
+    robotArm.drop()
 else:
     robotArm.moveRight()
     robotArm.drop()

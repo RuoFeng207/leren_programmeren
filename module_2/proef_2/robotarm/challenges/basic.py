@@ -34,7 +34,7 @@ challenges =  {
         'solution': hasSolution, 
         'criteria':'r:0,y:2', 
         'name': 'sort 1 box', 
-        'symbols':'x-ry', 'levels': 
+        'symbols':'x-ryg', 'levels': 
         '2:12,3:11/5',
         'example':exampleSolution, 
         'info':'red to spot 0, yellow to spot 2'},
