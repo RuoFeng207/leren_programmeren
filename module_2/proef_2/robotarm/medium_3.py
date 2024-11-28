@@ -5,15 +5,19 @@ from challenges.medium import challenges
 
 # load the robotarm with a challenge on a level (max 3)
 robotArm = RobotArm(challenges[3],0)
-# your code starts here: #bauw scan coller 
+# your code starts here:
 a=0
 for x in range(8):
     robotArm.moveRight()
 for x in range(9):    
     robotArm.grab()
-    robotArm.moveRight()
-    robotArm.drop()
-    robotArm.moveLeft()
+    coller=robotArm.scan()
+    if coller=="white":
+        robotArm.moveRight()
+        robotArm.drop()
+        robotArm.moveLeft()
+    else:
+        robotArm.drop()
     if a<8:
         robotArm.moveLeft()
     a+=1
