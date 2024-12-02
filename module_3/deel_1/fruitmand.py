@@ -33,9 +33,4 @@ fruitmand = [{
     'weight' : 100,
     'color' : 'yellow',
     'round' : True
-},{
-    'name' : 'watermeloen',
-    'weight' : 2500,
-    'color' : 'green and black',
-    'round' : True
 }]
