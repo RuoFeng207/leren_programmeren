@@ -1,8 +1,7 @@
 from fruitmand import fruitmand
 lijst=[]
 for fruit in fruitmand:
-    fruit=fruit["name"]
+    fruit=fruit['color']
     lijst.append(fruit)
-
-lijst.remove("druif")
+lijst.remove("red")
 print(lijst)
