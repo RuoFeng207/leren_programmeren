@@ -6,7 +6,8 @@ kleur = {
     "yellow": "geel",
     "green": "groen",
     "orange": "oranje",
-    "brown": "bruin"
+    "brown": "bruin",
+    "pink":"roze"
 }
 
 for fruit in fruitmand:
