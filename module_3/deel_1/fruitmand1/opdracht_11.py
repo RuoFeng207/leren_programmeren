@@ -1,6 +1,7 @@
 from fruitmand import fruitmand
 rond =0
 niet_rond=0
+
 kleuren = ["red", "yellow", "brown", "green"]
 
 while True:
@@ -12,17 +13,18 @@ while True:
         print("Dit is geen kleur ")
 
 for fruit in fruitmand:
-    if fruit["color"] == kleur and fruit["round"]== True:
-        print(fruit["name"])
-        rond+=1
-        print(rond)
-    else:
-        niet_rond+=1
-        print(niet_rond)
+    if fruit["color"]==kleur:
+        kleur_fruit=(fruit["color"])
+        if fruit["round"]==True:
+            rond+=1
+        else:
+            niet_rond+=1
 
-if rond>niet_rond:
-    print("Er zijn meer niet ronde dan ronde vruchten van die kleur.")
-elif rond<niet_rond:
-    print("Er zijn meer ronde dan niet ronde vruchten van die kleur.")
+verschil = rond-niet_rond
+
+if rond > niet_rond:
+    print(f"Er zijn {verschil} meer ronde vruchten dan niet ronde vruchten in de kleur {kleur}.")
+elif rond < niet_rond:
+    print(f"Er zijn {abs(verschil)} minder ronde vruchten dan niet ronde vruchten in de kleur {kleur}.")
 else:
-    print("Je hebt evenveel ronde als niet ronde vruchten van die kleur.")
+    print(f"Er zijn {rond} ronde vruchten en {niet_rond} niet ronde vruchten in de kleur {kleur}.")
