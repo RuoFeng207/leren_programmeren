@@ -1,27 +1,22 @@
 from fruitmand import fruitmand
-lijst3=[]
-for fruit in reversed(fruitmand):
-    fruit=(fruit["weight"])
-    lijst3.append(fruit)
-gewicht = sum(lijst3)
-gewicht=gewicht/1000
-gewicht=gewicht
-print(f"Het gewicht van de fruitmand zonder watermeloen is {gewicht} kg")
 
-lijst=[]
+gewicht = sum(fruit["weight"] for fruit in fruitmand)
+gewicht=gewicht/1000
+
+print(f"gewicht zonder watermeloen is {gewicht:.2f} kg")
+
+watermeloen={
+    'name' : 'watermeloen',
+    'weight' : 2500,
+    'color' : 'green',
+    'round' : True
+}
+fruitmand.append(watermeloen)
+
 for fruit in fruitmand:
-    fruit=fruit["name"]
-    lijst.append(fruit)
+    print(fruit["name"])
 
-lijst.append("watermeloen")
-watermeloen=2500
-
-lijst2=[]
-for fruit in reversed(fruitmand):
-    fruit=(fruit["weight"])
-    lijst2.append(fruit)
-lijst2.append(watermeloen)
-gewicht = sum(lijst2)
+gewicht = sum(fruit["weight"] for fruit in fruitmand)
 gewicht=gewicht/1000
-gewicht=gewicht
-print(f"Het gewicht van de fruitmand met watermeloen is {gewicht} kg")
+
+print(f"gewicht met watermeloen is {gewicht:.2f} kg")

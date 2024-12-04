@@ -1,10 +1,8 @@
 from fruitmand import fruitmand
+fruitmand.sort(key=lambda fruit:fruit["weight"], reverse=True)
 
-lijst = []
 for fruit in fruitmand:
-    gewicht = fruit["weight"]
-    lijst.append(gewicht)
-
-lijst.sort(reverse=True)
-
-print("Gesorteerd van groot naar klein:", lijst)
+    naam=(fruit["name"])
+    gewicht=(fruit["weight"])
+    gewicht=gewicht/1000
+    print(f"{naam} is {gewicht} kg")
