@@ -1,9 +1,10 @@
 from fruitmand import fruitmand
-kleur_set=set()
-if "druif" in fruitmand:
-    fruitmand.remove("druif")
+
 for fruit in fruitmand:
-    fruit=fruit['color']
-    kleur_set.add(fruit)
-kleur_set.remove("red")
-print(kleur_set)
+    if fruit["name"]== "druif":
+        fruitmand.remove(fruit)
+kleuren=[]
+for fruit in fruitmand:
+    if not fruit["color"] in kleuren:
+        kleuren.append(fruit["color"])
+print(kleuren)
