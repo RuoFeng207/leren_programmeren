@@ -6,7 +6,8 @@ PRIJS_CHAMPAGNE = 12.30
 
 DRANKJES = ('cola', 'bier', 'champagne')
 VIP_LIST = ('jeroen', 'jouke', 'rudi')
-
+bandje = False
+stempel = False
 
 
 #bouw hieronder de floowchart na
@@ -16,7 +17,7 @@ def oud_genoeg(toegang):
     verschil = toegang - leeftijd
     print(f"Probeer het over {verschil} jaar nog eens")
 
-#vraagt je leeftijd
+#vraagt je leeftijd voor toegang
 while True:
     try:
         leeftijd=int(input("Hoe oud ben jij? "))
@@ -39,4 +40,43 @@ while True:
         break
     else:
         print("Je kunt hier geen cijfers invoeren ")
+#chek de vip lijst+leeftijd>=21
+
+if naam in VIP_LIST and leeftijd>=21:
+    print("Jij krijg van mij een blauw bandje")
+    kleur="blauw"
+
+if naam in VIP_LIST and leeftijd<21:
+    print("Jij krijgt van mij een rood bandje")
+    kleur="rood"
+if naam not in VIP_LIST and leeftijd>=21:
+    print("Jij krijgt van mij een stempel")
+    stempel=True
+
+#vraag wat ze willen drinken
+while True:
+    
+    drank = str(input("Wat wil je drinken ").lower())
+    
+    if drank.isalpha():
+        break
+    else:
+        print("Je kunt hier geen cijfers invoeren ")
+
+# drankje keus true
+
+if drank== "cola" and bandje == True:
+    print("Alsjebieft met dit drankje is van het huis")
+    quit()
+if drank == "bier" and bandje== True or stempel == True:
+    print("Alsjebieft met dit drankje is van het huis")
+    quit()
+if drank== "champagne" and bandje== True and kleur =="blauw":
+    print(f"Oke hier is je drankje dat is dan {PRIJS_CHAMPAGNE} euro ")
+    quit()
+    
+#drankje keus false
+if drank not in DRANKJES:
+    print("Ik begrijp er niks van, hier een glaasje water.")
+    quit()
 
