@@ -8,6 +8,10 @@ DRANKJES = ('cola', 'bier', 'champagne')
 VIP_LIST = ('jeroen', 'jouke', 'rudi')
 bandje = False
 stempel = False
+kleur=""
+
+def quinten():
+    quit()
 
 
 #bouw hieronder de floowchart na
@@ -29,7 +33,7 @@ while True:
 if leeftijd<18:
     print("sorry je mag er niet in ")
     oud_genoeg(18)
-    quit() #eindigt het programma
+    quinten() #eindigt het programma
 
 #vraagt om naam
 while True:
@@ -68,10 +72,10 @@ while True:
 # drankje keus true
 
 if drank== "cola" and bandje == True:
-    print("Alsjebieft met dit drankje is van het huis")
+    print("Alsjebieft dit drankje is van het huis")
 
-if drank == "bier" and bandje== True or stempel == True:
-    print("Alsjebieft met dit drankje is van het huis")
+if drank == "bier" and bandje== True or drank=="bier" and stempel == True:
+    print("Alsjebieft dit drankje is van het huis")
 
 if drank== "champagne" and bandje== True and kleur =="blauw":
     print(f"Oke hier is je drankje dat is dan {PRIJS_CHAMPAGNE} euro ")
@@ -92,6 +96,7 @@ if drank=="bier" and bandje== False and stempel==False:
 if drank=="champagne" and bandje== False :
     print("alleeen vips mogen champagne bestellen")
 
-if bandje!="blauw":
+if naam in VIP_LIST and kleur=="rood" and drank =="champagne":
     print("Sorry je bent te jong om alcohol te kopen")
     oud_genoeg(21)
+    
