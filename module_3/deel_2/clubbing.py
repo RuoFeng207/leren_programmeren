@@ -74,7 +74,7 @@ while True:
 if drank== "cola" and bandje == True:
     print("Alsjebieft dit drankje is van het huis")
 
-if drank == "bier" and bandje== True or drank=="bier" and stempel == True:
+if drank == "bier" and bandje== True:
     print("Alsjebieft dit drankje is van het huis")
 
 if drank== "champagne" and bandje== True and kleur =="blauw":
@@ -88,6 +88,8 @@ if drank not in DRANKJES:
 if drank== "cola" and bandje== False:
     print(f"Oke hier is je drankje dat is dan {PRIJS_COLA} euro ")
 
+if drank== "bier" and bandje== False:
+    print(f"Oke hier is je drankje dat is dan {PRIJS_BIER} euro ")
 
 if drank=="bier" and bandje== False and stempel==False:
     print("Sorry je mag nog geen alcohol bestellen")
