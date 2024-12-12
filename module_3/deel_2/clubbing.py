@@ -45,10 +45,12 @@ while True:
 if naam in VIP_LIST and leeftijd>=21:
     print("Jij krijg van mij een blauw bandje")
     kleur="blauw"
+    bandje= True
 
 if naam in VIP_LIST and leeftijd<21:
     print("Jij krijgt van mij een rood bandje")
     kleur="rood"
+    bandje= True
 if naam not in VIP_LIST and leeftijd>=21:
     print("Jij krijgt van mij een stempel")
     stempel=True
@@ -67,16 +69,29 @@ while True:
 
 if drank== "cola" and bandje == True:
     print("Alsjebieft met dit drankje is van het huis")
-    quit()
+
 if drank == "bier" and bandje== True or stempel == True:
     print("Alsjebieft met dit drankje is van het huis")
-    quit()
+
 if drank== "champagne" and bandje== True and kleur =="blauw":
     print(f"Oke hier is je drankje dat is dan {PRIJS_CHAMPAGNE} euro ")
-    quit()
+
     
 #drankje keus false
 if drank not in DRANKJES:
     print("Ik begrijp er niks van, hier een glaasje water.")
-    quit()
+ 
+if drank== "cola" and bandje== False:
+    print(f"Oke hier is je drankje dat is dan {PRIJS_COLA} euro ")
 
+
+if drank=="bier" and bandje== False and stempel==False:
+    print("Sorry je mag nog geen alcohol bestellen")
+    oud_genoeg(21)
+   
+if drank=="champagne" and bandje== False :
+    print("alleeen vips mogen champagne bestellen")
+
+if bandje!="blauw":
+    print("Sorry je bent te jong om alcohol te kopen")
+    oud_genoeg(21)
