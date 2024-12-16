@@ -47,7 +47,7 @@ while True:
 #chek de vip lijst+leeftijd>=21
 
 if naam in VIP_LIST and leeftijd>=21:
-    print("Jij krijg van mij een blauw bandje")
+    print("Jij krijgt van mij een blauw bandje")
     kleur="blauw"
     bandje= True
 
@@ -62,7 +62,7 @@ if naam not in VIP_LIST and leeftijd>=21:
 #vraag wat ze willen drinken
 while True:
     
-    drank = str(input("Wat wil je drinken ").lower())
+    drank = str(input("Wat wil je drinken? ").lower())
     
     if drank.isalpha():
         break
@@ -88,7 +88,7 @@ if drank not in DRANKJES:
 if drank== "cola" and bandje== False:
     print(f"Oke hier is je drankje dat is dan {PRIJS_COLA} euro ")
 
-if drank== "bier" and bandje== False:
+if drank== "bier" and bandje== False and leeftijd>21:
     print(f"Oke hier is je drankje dat is dan {PRIJS_BIER} euro ")
 
 if drank=="bier" and bandje== False and stempel==False:
