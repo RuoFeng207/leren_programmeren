@@ -39,7 +39,7 @@ while True:
                 print("")
 
     while True:
-        nogeens = input("Wilt u nog iets bestellen? (ja/nee) ").lower()
+        nogeens = input("Wilt u nog iets bestellen? ").lower()
         if nogeens in ["ja", "nee"]:
             break
         else:
