@@ -16,8 +16,11 @@ while True:
         while True:
             try:
                 aantal = int(input(f"Hoeveel wilt u daarvan toevoegen? U heeft er al {hoeveel[index]} van. "))
-                hoeveel[index] += aantal 
-                break
+                if aantal < 0:
+                    print("Je kan geen min getallen invoeren.")
+                else:
+                    hoeveel[index] += aantal 
+                    break
             except ValueError:
                 print("U kunt hier alleen hele getallen invoeren.")
                 print("")
@@ -25,16 +28,19 @@ while True:
         product.append(artikel)  
         while True:
             try:
-                aantal = int(input("Hoeveel wilt u daarvan toevoegen? ").lower())
-                hoeveel.append(aantal)  
-                break
+                aantal = int(input("Hoeveel wilt u daarvan toevoegen? "))
+                if aantal < 0:
+                    print("Je kan geen min getallen invoeren.")
+                else:
+                    hoeveel.append(aantal)  
+                    break
             except ValueError:
                 print("U kunt hier alleen hele getallen invoeren.")
                 print("")
 
     while True:
-        nogeens = input("Wilt u nog iets bestellen? ").lower()
-        if nogeens == "ja" or nogeens == "nee":
+        nogeens = input("Wilt u nog iets bestellen? (ja/nee) ").lower()
+        if nogeens in ["ja", "nee"]:
             break
         else:
             print("")
