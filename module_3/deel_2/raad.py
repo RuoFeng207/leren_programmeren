@@ -15,6 +15,10 @@ while ronde<21:
             except ValueError:
                 print("Je kan aleen maar cijfers invoeren")
         verschil = abs(keuze-raad)
+        if raad<keuze:
+            print("hoger")
+        elif raad>keuze:
+            print("lager")
 
         if verschil<20 and verschil >0:
             print("Je bent heel warm")
@@ -39,3 +43,5 @@ while ronde<21:
     if nogeens=="nee":
         print("Bedankt voor het spelen")
         break
+    if ronde==20:
+        print("Bedankt voor het spelen")
