@@ -6,6 +6,7 @@ while ronde<21:
     print(f"ronde {ronde}")
     ronde+=1
     keuze=random.randint(1,1000)
+    keuze= 150
     print(keuze)
     while True:
         while True:
