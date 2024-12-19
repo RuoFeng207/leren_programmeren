@@ -1,0 +1,13 @@
+start
+- raad getal
+- toon uitkomst hoger/lager
+of toon geraden 
+- geraden =+1 punt
+- niet geraden ga door tot 10x raden
+- laat score zien.
+- opnieuw?
+- ja begin volgende ronde
+- nee break de loop
+- herhaal bovenstaande 20x
+- na 20x rondes break de loop 
+- vertel de speler dat het spel voorbij is 
