@@ -45,5 +45,15 @@ for y in range(teller):
             deelnemers.remove(kies1)
             lootjes.remove(kies2)
             trekt = print(f"{kies1} heeft {kies2}")
+            while True:
+                zien =input("Welke naam wil je zien? ")
+                zien = zien.capitalize
+                if zien == kies1:
+                    print(f"Je hebt {kies2}")
+                    break
+                if zien == kies2:
+                    print(f"Je hebt{kies1}")
+                    break
+                else:
+                    print("Deze naam zit niet in de lijst")
             break
-        
