@@ -34,26 +34,28 @@ while True:
     if extra =="nee":
         print("Oke")
         break
-
-for y in range(teller):
-    while True:
-        kies1= random.choice(deelnemers)
-        kies2 = random.choice(lootjes)
-        
-        
-        if kies1 != kies2:
-            deelnemers.remove(kies1)
-            lootjes.remove(kies2)
-            trekt = print(f"{kies1} heeft {kies2}")
-            while True:
-                zien =input("Welke naam wil je zien? ")
-                zien = zien.capitalize
-                if zien == kies1:
-                    print(f"Je hebt {kies2}")
-                    break
-                if zien == kies2:
-                    print(f"Je hebt{kies1}")
-                    break
-                else:
-                    print("Deze naam zit niet in de lijst")
+while True:
+    probleem= False
+    random.shuffle(lootjes)
+    print(lootjes)
+    for y in range(len(lootjes)):
+        if lootjes[y]==deelnemers[y]:
+            probleem= True
             break
+    
+    if probleem== False:
+        break
+for i in range(len(lootjes)):
+    trekt = print(f"{lootjes[i]} heeft {deelnemers[i]}")
+
+# for y in range(teller):
+#     while True:
+#         kies1= random.choice(deelnemers)
+#         kies2 = random.choice(lootjes)
+        
+        
+#         if kies1 != kies2:
+#             deelnemers.remove(kies1)
+#             lootjes.remove(kies2)
+#             trekt = print(f"{kies1} heeft {kies2}")
+#             break
