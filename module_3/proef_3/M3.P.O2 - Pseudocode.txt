@@ -3,7 +3,8 @@ M3.P.O2 - Pseudocode
 - start
 - voer de namen van alle deelnemers in
 - als je naam een cijfer bevat vraagt het programma de naam opnieuw
-anders worden de namen opgeslagen in een lijst 
+anders worden de namen opgeslagen in een lijst
+- na 3 keer vraagt het programma of je nog een naam wil invoeren
 - de namen worden willekeurig geschut.
 -dan voer je je eigen naam in en als je naam niet gelijk is aan de naam op het lootje hou je dat en dat proces van naam invoeren trekken en lootje krijgen gaat zo door totdat alle deelnemers zijn geweest.
 - dan worden alle paars onder in getoond 
