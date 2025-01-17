@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.0.6">
   <diagram name="Pagina-1" id="P5lcU0_mIXGUXpW0Iwos">
-    <mxGraphModel dx="4121" dy="1330" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3298" dy="887" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -881,7 +881,7 @@
             <mxPoint x="-2" y="-1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="4xNr6w3BmmHwGKGZSPj7-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="4xNr6w3BmmHwGKGZSPj7-116">
+        <mxCell id="4xNr6w3BmmHwGKGZSPj7-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f8cecc;strokeColor=light-dark(#000000, #d7817e);" edge="1" parent="1" source="4xNr6w3BmmHwGKGZSPj7-116">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-1160" y="2330" as="targetPoint" />
             <Array as="points">
@@ -1011,7 +1011,7 @@
         </mxCell>
         <mxCell id="4xNr6w3BmmHwGKGZSPj7-140" value="Ja" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4xNr6w3BmmHwGKGZSPj7-139">
           <mxGeometry x="-0.0187" y="-3" relative="1" as="geometry">
-            <mxPoint x="483" y="-487" as="offset" />
+            <mxPoint x="503" y="-487" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="4xNr6w3BmmHwGKGZSPj7-141" value="sfinx boos?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
