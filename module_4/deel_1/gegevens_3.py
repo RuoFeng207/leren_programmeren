@@ -3,6 +3,7 @@ def gegevens():
     while True:
         naam = input("Wat is je naam? ").capitalize()
         woon = input("Waar woon je ").capitalize()
+        
         while True:
             try: 
                 leeftijd = int(input("Wat is je leeftijd "))
@@ -23,10 +24,7 @@ def gegevens():
                 print("Je kunt aleen ja of nee invoeren")
         if nogeens == "nee":
             break
-
-    while lijst:
-        show = lijst.pop(0)
-        print(show)
+        print(lijst[0])
     return gegeven
 
 gegevens()
