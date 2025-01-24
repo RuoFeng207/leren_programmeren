@@ -1,30 +1,26 @@
-def gegevens():
-    lijst=[]
+def vraag():
+    data = {}
+    data["naam"] = input("Wat is je naam? ")
+    data["woon"]= input("waar woon je? ")
+    data["leeftijd"] = input("Wat is je leeftijd? ")
+    return data
+
+def gegvens():
+    lijst = []
     while True:
-        naam = input("Wat is je naam? ").capitalize()
-        woon = input("Waar woon je ").capitalize()
-        
-        while True:
-            try: 
-                leeftijd = int(input("Wat is je leeftijd "))
-                break
-            except ValueError:
-                print("Je mag aleen hele cijfers doen")
-        gegeven= {"naam":naam, "leeftijd":leeftijd,"woon":woon}
-        deel=(f"{gegeven["naam"]}, die in {gegeven["woon"]} woont, is {gegeven["leeftijd"]} jaar")
-        lijst.append(deel)
-        while True:
-            nogeens=input("Wil je nog een naam invoeren? (Ja/Nee) ").lower()
-            print("")
-            if nogeens =="nee":
-                break
-            elif nogeens=="ja":
-                break
-            else:
-                print("Je kunt aleen ja of nee invoeren")
+        q = vraag()
+        lijst.append(q)
+        nogeens = input("Wil je nog eens? (Ja/Nee) ").lower()
         if nogeens == "nee":
             break
-        print(lijst[0])
-    return gegeven
+        elif nogeens != "ja":
+            print("Je kan alleen ja of nee invoeren")
+            break
+        print("")
+        
+    return lijst
 
-gegevens()
+a=gegvens()
+print("")
+for persoon in a:
+    print(f"{persoon["naam"]} die in {persoon["woon"]} woont is {persoon["leeftijd"]} jaar")
