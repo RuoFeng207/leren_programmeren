@@ -21,10 +21,11 @@ def is_prime(number:int) -> bool:
     # geeft alle variable terug 
     return True
 
-def prime_teller():
+def prime_teller(getal):
     lijst =[]
-    for i in range(1,101):
+    for i in range(1,getal+1):
         if is_prime(i):
             lijst.append(i)
     print(lijst)
-prime_teller()
+    return getal
+prime_teller(100)
