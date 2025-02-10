@@ -5,16 +5,17 @@ print("3 Wil je dat je zien hoeveel prime er tussen 2 getallen zijn")
 
 while True:
     while True:
-        try:
-            keus =int(input("Kies 1,2 of 3: "))
+        while True:
+            try:
+                keus =int(input("Kies 1,2 of 3: "))
+                break
+            except:
+                print("Je mag aleen cijfers invoeren")
+        if keus == keus<1 or keus>3:
+            print("Je kan alleen 1,2 of 3 invoeren")
+        else:
             break
-        except:
-            print("Je mag aleen cijfers invoeren")
-    if keus == keus<1 or keus>3:
-        print("Je kan alleen 1,2 of 3 invoeren")
-    else:
-        break
-while True:
+
     if keus == 1:
         while True:
             try:
@@ -36,17 +37,24 @@ while True:
     else:
         while True:
             try:
-                vraag = int(input("Voer een getal in: "))
+                vraag = int(input("Voer getal 1 in: "))
                 break
             except:
                 print("Je kunt alleen cijfers invoeren")
-        print(tussen_cijfers(vraag))
+        while True:
+            try:
+                vraag_2 = int(input("Voer getal 1 in: "))
+                break
+            except:
+                print("Je kunt alleen cijfers invoeren")
+        print(tussen_cijfers(vraag,vraag_2))
 
     while True:
         nogeens = input("Wil je nog eens? ").lower()
         if nogeens == "ja":
             break
         elif nogeens == "nee":
+            print("Tot ziens")
             break
         else:
             print("Je kan alleen ja of nee invoeren")

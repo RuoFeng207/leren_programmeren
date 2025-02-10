@@ -28,7 +28,7 @@ def prime_teller(getal):
         if is_prime(i):
             lijst.append(i)
 
-    return getal,lijst
+    return lijst
 
 
 #prime aantal gegeven
