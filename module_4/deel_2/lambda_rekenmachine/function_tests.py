@@ -1,1 +1,2 @@
-import test_lib, functions_rekenen_2
+from functions_rekenen_2 import *
+from test_lib import test, report
