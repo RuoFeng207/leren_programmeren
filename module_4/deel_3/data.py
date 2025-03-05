@@ -3,7 +3,7 @@ JOURNEY_IN_DAYS = 0
 
 #data
 mainCharacter = {
-    'name' : '',
+    'name' : 'Ruo Feng',
     'ownsHorse' : True,
     'adventuring' : True,
     'cash' : {
