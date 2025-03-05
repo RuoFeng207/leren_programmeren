@@ -22,6 +22,7 @@ def getal_afhandel():
         except:
             print("Je kan alleen cijfers invoeren")
     return n1
+teller = 0
 while True:
     print("Wat wild u doen?")
     print("A) getallen optellen")
@@ -43,48 +44,91 @@ while True:
             print("")
             print("Deze optie is niet mogelijk")
     if choice == "a":
-        n1,n2 = getal_afhandelen_2()
+        if teller == 0:
+            n1,n2 = getal_afhandelen_2()
+        else:
+            n1 = som
+            n2 = getal_afhandel()
         som = addition(n1,n2)
         print("----------------------------")
         print(f"de uitkomst van {n1} + {n2} = {som:.1f}")
     if choice == "b":
-        n1,n2 = getal_afhandelen_2()
+        if teller == 0:
+            n1,n2 = getal_afhandelen_2()
+        else:
+            n1 = som
+            n2 = getal_afhandel()
         som = subtraction(n1,n2)
         print("----------------------------")
         print(f"de uitkomst van {n1} - {n2} = {som:.1f}")
+
     if choice == "c":
-        n1,n2 = getal_afhandelen_2()
+        if teller == 0:
+            n1,n2 = getal_afhandelen_2()
+        else:
+            n1 = som
+            n2 = getal_afhandel()
         som = multiplication(n1,n2)
+        print("----------------------------")
+        print(f"de uitkomst van {n1} x {n2} = {som:.1f}")
+    
     if choice == "d":
-        n1,n2= getal_afhandelen_2()
+        if teller == 0:
+            n1,n2 = getal_afhandelen_2()
+        else:
+            n1 = som
+            n2 = getal_afhandel()
         som = division(n1,n2)
         print("----------------------------")
-        print(f"de uitkomst van {n1} : {n2} = {som:.1f}")
+        print(f"de uitkomst van {n1} - {n2} = {som:.1f}")
+
     if choice == "e":
-        n2 = 1
-        n1 = getal_afhandel()
+        if teller == 0:
+            n1 = getal_afhandel()
+            n2 = 1
+        else:
+            n1 = som
+            n2 = 1
         som = addition(n1,n2)
         print("----------------------------")
         print(f"de uitkomst van {n1} + {n2} = {som:.1f}")
+    
     if choice == "f":
-        n2 = 1
-        n1 = getal_afhandel()
+        if teller == 0:
+            n1 = getal_afhandel()
+            n2 = 1
+        else:
+            n1 = som
+            n2 = 1
         som = subtraction(n1,n2)
         print("----------------------------")
         print(f"de uitkomst van {n1} + {n2} = {som:.1f}")
+
     if choice == "g":
-        n2 = 2
-        n1 = getal_afhandel()
+        if teller == 0:
+            n1 = getal_afhandel()
+            n2 = 2
+        else:
+            n1 = som
+            n2 = 2
         som = multiplication(n1,n2)
         print("----------------------------")
-        print(f"de verdubbeling van {n1} = {som:.1f}")
+        print(f"de uitkomst van {n1} + {n2} = {som:.1f}")
+
     if choice == "h":
-        n2 = 2
-        n1 = getal_afhandel()
-        som = subtraction(n1,n2)
+        if teller == 0:
+            n1 = getal_afhandel()
+            n2 = 2
+        else:
+            n1 = som
+            n2 = 2
+        som = division(n1,n2)
         print("----------------------------")
-        print(f"de halvering van {n1} = {som:.1f}")
+        print(f"de uitkomst van {n1} + {n2} = {som:.1f}")
+
     if choice == "i":
         print("Oke doei")
         break
+    teller+=1
+
     print("")
