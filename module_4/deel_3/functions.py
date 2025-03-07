@@ -3,21 +3,41 @@ from termcolor import colored
 from data import JOURNEY_IN_DAYS
 
 ##################### O03 #####################
-
+munt = 50
 def copper2silver(amount:int) -> float:
-    pass
+    copper_silver = amount/10
+    return copper_silver
+print(f"{munt} koper munt(en) is gelijk aan {copper2silver(munt)} zilver (munt)")
 
 def silver2gold(amount:int) -> float:
-    pass
+    silver_gold = amount/5
+    return silver_gold
+print(f"{munt} zilver munt(en) is gelijk aan {silver2gold(munt)} goud munt(en)")
 
 def copper2gold(amount:int) -> float:
-    pass
+    copper_gold = amount/50
+    return copper_gold
+print(f"{munt} koper munt(en) is gelijk aan {copper2gold(munt)} goud munt(en)")
 
 def platinum2gold(amount:int) -> float:
-    pass
+    platinum_gold = amount*25
+    return platinum_gold
+print(f"{munt} platinum munt(en) is gelijk aan {platinum2gold(munt)} goud munt(en)")
 
 def getPersonCashInGold(personCash:dict) -> float:
-    pass
+    gold = 0
+    for cash in personCash:
+        if cash == "copper":
+            gold+= copper2gold(personCash[cash])
+        if cash =="silver":
+            gold+= silver2gold(personCash[cash])
+        if cash == "platinum":
+            gold+= platinum2gold(personCash[cash])
+        if cash == "gold": 
+            gold += personCash[cash]
+
+    return gold
+
 
 ##################### O05 #####################
 
