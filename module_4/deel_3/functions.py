@@ -51,7 +51,17 @@ def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
 ##################### O06 #####################
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
-    pass
+    result = []
+    for item in list: 
+        if key in item:
+            if item[key]== value:
+                result.append(item)
+            
+            else:
+                print("error value bestaat niet")
+        else:
+            print("key not found")
+    return result
 
 def getAdventuringPeople(people:list) -> list:
     pass
