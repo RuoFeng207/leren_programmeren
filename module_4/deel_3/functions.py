@@ -7,22 +7,22 @@ munt = 50
 def copper2silver(amount:int) -> float:
     copper_silver = amount/10
     return copper_silver
-print(f"{munt} koper munt(en) is gelijk aan {copper2silver(munt)} zilver (munt)")
+# print(f"{munt} koper munt(en) is gelijk aan {copper2silver(munt)} zilver (munt)")
 
 def silver2gold(amount:int) -> float:
     silver_gold = amount/5
     return silver_gold
-print(f"{munt} zilver munt(en) is gelijk aan {silver2gold(munt)} goud munt(en)")
+# print(f"{munt} zilver munt(en) is gelijk aan {silver2gold(munt)} goud munt(en)")
 
 def copper2gold(amount:int) -> float:
     copper_gold = amount/50
     return copper_gold
-print(f"{munt} koper munt(en) is gelijk aan {copper2gold(munt)} goud munt(en)")
+# print(f"{munt} koper munt(en) is gelijk aan {copper2gold(munt)} goud munt(en)")
 
 def platinum2gold(amount:int) -> float:
     platinum_gold = amount*25
     return platinum_gold
-print(f"{munt} platinum munt(en) is gelijk aan {platinum2gold(munt)} goud munt(en)")
+# print(f"{munt} platinum munt(en) is gelijk aan {platinum2gold(munt)} goud munt(en)")
 
 def getPersonCashInGold(personCash:dict) -> float:
     gold = 0
