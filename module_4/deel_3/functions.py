@@ -91,8 +91,8 @@ def getAdventuringFriends(friends:list) -> list:
 ##################### O07 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
+    horse = 4.4
     pass
-
 def getNumberOfTentsNeeded(people:int) -> int:
     pass
 

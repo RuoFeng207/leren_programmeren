@@ -14,7 +14,7 @@ result = copper2silver(11)
 test('copper2silver - test 2',expected, result)
 
 expected = 2.0
-result = silver2gold(10)
+result = silver2gold(3)
 test('silver2gold - test 1',expected, result)
 
 expected = 2.6
