@@ -10,7 +10,7 @@ mainCharacter = {
     'adventuring' : True,
     'cash' : {
         'platinum' : 0,
-        'gold' : 1,
+        'gold' : 1, 
         'silver' : 7,
         'copper' : 5
     }

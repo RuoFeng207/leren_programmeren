@@ -64,10 +64,20 @@ def getFromListByKeyIs(list:list, key:str, value:any) -> list:
     return result
 
 def getAdventuringPeople(people:list) -> list:
-    pass
+    lijst = []
+    for x in people:
+        if "adventuring" in x:
+            if x["adventuring"] == True:
+                return people
 
+    return lijst
 def getShareWithFriends(friends:list) -> list:
-    pass
+    lijst = []
+    for x in friends:
+        if "adventuring" in x:
+            if x["adventuring"] == True:
+                return friends
+    return lijst
 
 def getAdventuringFriends(friends:list) -> list:
     pass
