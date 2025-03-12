@@ -74,13 +74,19 @@ def getAdventuringPeople(people:list) -> list:
 def getShareWithFriends(friends:list) -> list:
     lijst = []
     for x in friends:
-        if "adventuring" in x:
-            if x["adventuring"] == True:
+        if "shareWith" in x:
+            if x["shareWith"] == True:
                 return friends
     return lijst
 
 def getAdventuringFriends(friends:list) -> list:
-    pass
+    lijst = []
+    for x in friends:
+        if "adventuring" in x and "shareWith" in x:
+            if x["adventuring"] == True and x["shareWith"] == True:
+                return friends
+            
+    return lijst
 
 ##################### O07 #####################
 
