@@ -1,4 +1,4 @@
-import time
+import time,math
 from termcolor import colored
 from data import JOURNEY_IN_DAYS,COST_FOOD_HUMAN_COPPER_PER_DAY,COST_FOOD_HORSE_COPPER_PER_DAY
 
@@ -91,14 +91,18 @@ def getAdventuringFriends(friends:list) -> list:
 ##################### O07 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
-    horse = 4.4
     pass
+    # horse = (people*1)/2
+    # horse = math.ceil(horse)
+    # return horse
 def getNumberOfTentsNeeded(people:int) -> int:
+    # tent = (people*1)/3
+    # tent = math.ceil(tent)
+    # return tent
     pass
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
     pass
-
 ##################### O08 #####################
 
 def getItemsAsText(items:list) -> str:
