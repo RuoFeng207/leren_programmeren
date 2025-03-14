@@ -106,8 +106,8 @@ def getTotalRentalCost(horses:int, tents:int) -> float:
     cost_horse =COST_HORSE_SILVER_PER_DAY*silver_horses
     to_gold = silver2gold(cost_horse)
     week =JOURNEY_IN_DAYS/7
-    math.ceil(week)
-    tot_tenst = tents*week
+    weeks= math.ceil(week)
+    tot_tenst = tents*weeks
     tent_gold = tot_tenst*COST_TENT_GOLD_PER_WEEK
     tot_gold = tent_gold+to_gold
     return tot_gold
