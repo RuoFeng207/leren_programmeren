@@ -178,7 +178,7 @@ if adventureStarted:
     elif JOURNEY_IN_DAYS == 0:
         print_colorvars('Een reis zonder het bestuderen van de kaart bleek toch geen goed idee, ineens zag {} daar weer het beginpunt en kon er opnieuw begonnen worden.', [mainCharacter['name']])
     elif journeyFoodCost == None or journeyFoodCost == 0:
-        print_colorvars('Reizen zonder eten doet {} geen goed en zij keerde al snel terug naar huis.', [mainCharacter['name']])
+        print_colorvars('Reizen zonder eten doet {} geen goed en hij keerde al snel terug naar huis.', [mainCharacter['name']])
     elif len(party) == 1:
         print_colorvars('Al gauw kwam {} er achter dat een avontuur in je eentje niet leuk is en keerde terug naar huis.', [mainCharacter['name']])
     elif rentStuff == False:
