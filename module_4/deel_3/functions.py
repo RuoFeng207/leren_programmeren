@@ -125,9 +125,6 @@ def getItemsAsText(items:list) -> str:
     elif lijst:
         return lijst[0]
 
-    
-    
-
 
 def getItemsValueInGold(items: list) -> list:
     # gold_values = []
