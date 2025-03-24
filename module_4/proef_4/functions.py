@@ -147,7 +147,19 @@ def getItemsValueInGold(items: list) -> list:
 ##################### O09 #####################
 
 def getCashInGoldFromPeople(people:list) -> float:
-    pass
+    gold = 0
+    for dictionary in people:
+        lijst = dictionary["cash"]
+        for cash in lijst:
+            if cash == "copper":
+                gold += copper2gold(dictionary["cash"]["copper"])
+            if cash == "silver":
+                gold+= silver2gold(dictionary["cash"]["silver"])
+            if cash =="platinum":
+                gold+= platinum2gold(dictionary["cash"]["platinum"])
+            if cash == "gold":
+                gold+= dictionary["cash"]["gold"]
+    return float(gold)
 
 ##################### O10 #####################
 
