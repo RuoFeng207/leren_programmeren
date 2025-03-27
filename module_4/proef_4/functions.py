@@ -183,9 +183,19 @@ def getAdventuringInvestors(investors:list) -> list:
     return adventuring_investors
 
 def getTotalInvestorsCosts(investors:list, gear:list) -> float:
-    pass
+    total = 0
+    int_investors =getInterestingInvestors(investors)
+    advent_investors =getAdventuringInvestors(int_investors)
+    for inventor in advent_investors:
+        print(inventor)
+        rent_cost = getTotalRentalCost(1,1)
+        gear_cost = getItemsValueInGold(gear)
+        food_cost = getJourneyFoodCostsInGold(1,1)
+        total+= rent_cost + gear_cost+food_cost
+    
+    return float(total)
 
-##################### O11 #####################
+##################### O11 # ####################
 
 def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> int:
     pass
