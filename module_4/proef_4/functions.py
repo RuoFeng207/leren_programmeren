@@ -204,7 +204,7 @@ def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> int
     cost_people = night_cost_in_gold*people
     cost_horses = stable_cost_in_gold*horses
     cost_night= round(cost_people+cost_horses,2)
-    
+
     if cost_night>leftoverGold:
         night_amount= 0
     else:
@@ -212,7 +212,14 @@ def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> int
     return night_amount
 
 def getJourneyInnCostsInGold(nightsInInn:int, people:int, horses:int) -> float:
-    pass
+    night_cost_in_gold = silver2gold(COST_INN_HUMAN_SILVER_PER_NIGHT)
+    stable_cost_in_gold= copper2gold(COST_INN_HORSE_COPPER_PER_NIGHT)
+    cost_people = night_cost_in_gold*people
+    cost_horses = stable_cost_in_gold*horses
+    tot_cost_horses=nightsInInn*cost_horses
+    tot_cost_people=nightsInInn*cost_people
+    total_cost = round(tot_cost_horses+tot_cost_people,2)
+    return total_cost
 
 ##################### O13 #####################
 
