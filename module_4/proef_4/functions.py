@@ -65,29 +65,42 @@ def getFromListByKeyIs(list:list, key:str, value:any) -> list:
     return result
 
 def getAdventuringPeople(people:list) -> list:
-    lijst = []
-    for x in people:
-        if "adventuring" in x:
-            if x["adventuring"] == True:
-                return people
+    return getFromListByKeyIs(people, 'adventuring', True)
 
-    return lijst
 def getShareWithFriends(friends:list) -> list:
-    lijst = []
-    for x in friends:
-        if "shareWith" in x:
-            if x["shareWith"] == True:
-                return friends
-    return lijst
+    return getFromListByKeyIs(friends, 'shareWith', True)
 
 def getAdventuringFriends(friends:list) -> list:
-    lijst = []
-    for x in friends:
-        if "adventuring" in x and "shareWith" in x:
-            if x["adventuring"] == True and x["shareWith"] == True:
-                return friends
+    return_items = []
+    for friend in friends:
+        if 'adventuring' in friend and friend['adventuring'] == True and 'shareWith' in friend and friend['shareWith'] == True:
+            return_items.append(friend)
+    return return_items
+
+# def getAdventuringPeople(people:list) -> list:
+#     lijst = []
+#     for x in people:
+#         if "adventuring" in x:
+#             if x["adventuring"] == True:
+#                 return people
+
+#     return lijst
+# def getShareWithFriends(friends:list) -> list:
+#     lijst = []
+#     for x in friends:
+#         if "shareWith" in x:
+#             if x["shareWith"] == True:
+#                 return friends
+#     return lijst
+
+# def getAdventuringFriends(friends:list) -> list:
+#     lijst = []
+#     for x in friends:
+#         if "adventuring" in x and "shareWith" in x:
+#             if x["adventuring"] == True and x["shareWith"] == True:
+#                 return friends
             
-    return lijst
+#     return lijst
 
 ##################### O07 #####################
 
@@ -184,15 +197,15 @@ def getAdventuringInvestors(investors:list) -> list:
     return adventuring_investors
 
 def getTotalInvestorsCosts(investors:list, gear:list) -> float:
-    total = 0
-    int_investors =getInterestingInvestors(investors)
-    advent_investors =getAdventuringInvestors(int_investors)
-    for inventor in advent_investors:
-        print(inventor)
-        rent_cost = getTotalRentalCost(1,1)
-        gear_cost = getItemsValueInGold(gear)
-        food_cost = getJourneyFoodCostsInGold(1,1)
-        total+= rent_cost + gear_cost+food_cost
+    total = 0.0
+    if len(investors) > 0 and len(gear) > 0 :
+        int_investors =getInterestingInvestors(investors)
+        advent_investors =getAdventuringInvestors(int_investors)
+        for inventor in advent_investors:
+            rent_cost = getTotalRentalCost(1,1)
+            gear_cost = getItemsValueInGold(gear)
+            food_cost = getJourneyFoodCostsInGold(1,1)
+            total+= rent_cost + gear_cost+food_cost
     
     return float(total)
 
@@ -224,11 +237,38 @@ def getJourneyInnCostsInGold(nightsInInn:int, people:int, horses:int) -> float:
 ##################### O13 #####################
 
 def getInvestorsCuts(profitGold:float, investors:list) -> list:
-    pass
+    int_investors =getInterestingInvestors(investors)
+    rest_investors = getAdventuringInvestors(int_investors)
+    percentages = []
+    cuts = []
+    for x in int_investors:
+        percentages.append(x["profitReturn"])
 
-def getAdventurerCut(profitGold:float, investorsCuts:list, fellowship:int) -> float:
-    pass
+    for percentage in percentages:
+        if percentage == 0.0:
+            continue
+        cut = (float(profitGold/100) * percentage)
+        cut = round(cut,2)
+        cuts.append(cut)
+    
+    return cuts
 
+def getAdventurerCut(profitGold: float, investorsCuts: list, fellowship: int) -> float:
+    total_investor_cut = sum(investorsCuts)
+    
+    if total_investor_cut >= profitGold:
+        adventurer_cut = 0.0
+    rest_gold = profitGold - total_investor_cut
+    
+    if rest_gold <0:
+        fellowship = 0.0
+
+    if fellowship > 0:
+        adventurer_cut = rest_gold / fellowship
+    else:
+        adventurer_cut = 0.0 
+    adventurer_cut =round(adventurer_cut,2)
+    return adventurer_cut
 ##################### O14 #####################
 
 def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:

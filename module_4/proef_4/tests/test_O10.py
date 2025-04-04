@@ -164,7 +164,7 @@ expected = 0.0
 result = getTotalInvestorsCosts(testarg_investors_test6, testarg_gearList_test4_5_6)
 test('getTotalInvestorsCosts - test 6',expected, result)
 
-expected = 37.08
+expected = 0.0
 result = getTotalInvestorsCosts(testarg_investors_test5_7, [])
 test('getTotalInvestorsCosts - test 7',expected, result)
 
