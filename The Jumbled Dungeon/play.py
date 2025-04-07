@@ -1,6 +1,6 @@
 import game
 
-ROOMORDER = ('1', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z')
+ROOMORDER = ('1', '4', '9', '2', '10', 'V', 'W', 'X', 'Y', 'Z')
 
 story = game.story(ROOMORDER)
 
