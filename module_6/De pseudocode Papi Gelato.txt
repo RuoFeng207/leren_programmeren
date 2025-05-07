@@ -1,0 +1,18 @@
+De pseudocode Papi Gelato
+
+1. start
+2. krijg een welkom bericht
+3. vraag om het aantal ijs bolletjes
+4. als het antwoord 1 tm 3 is ga naar regel 9
+5. als het antwoord 4 tm 8 is vermeld dat ze een bakkje krijgen, sla regel 9 tm 11 over
+7. als antwoord groter is dan 8 vermeld dat je niet zulke grootte bakken hebt
+8. als de opties niet van toepassing zijn vermeld dat je het niet snapt, start weer bij regel 3
+9. vraag of ze een hoorentje of bakje willen
+10. als het antwoord hoorntje of bakkje is ga naar regel 12
+11. als de opties niet van toepassing zijn vermeld dat je het niet snapt, start weer bij regel 9
+12. geef hun hun aankoop
+13. vraag of ze nog iets bestellen willen
+14. als het antwoord daarop ja is ga terug naar regel 3
+15. als het antwoord daarop nee is bedank de klant en zeg totziens
+16. als de opties niet van toepassing zijn vermeld dat je het niet snapt, start weer bij regel 13
+17. stop

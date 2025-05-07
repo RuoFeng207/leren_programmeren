@@ -1,0 +1,8 @@
+stappen plan
+1. maak een planning
+2. maak een pseudocode
+3. maak een flowchart
+4. start coderen
+5. zet commends
+6. check code
+7. lever in 
