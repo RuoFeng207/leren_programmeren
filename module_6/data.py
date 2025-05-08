@@ -1,0 +1,1 @@
+tekst_snelheid = 0.03
