@@ -33,3 +33,14 @@ def str_afvang(vraag:str, optie_1:str, optie_2:str):
         else:
             tekst("Sorry, dat snap ik niet...\n")
             print("")
+
+def prijs():
+    if d.prijs_bol == True:
+        d.tot_prijs+=(1.10* d.bol )
+    elif d.prijs_hoorntje == True:
+        d.tot_prijs+=1.25
+    elif d.prijs_bakje == True:
+        d.tot_prijs+=0.75
+    d.tot_prijs = round(d.tot_prijs,2)
+    
+    return d.tot_prijs
