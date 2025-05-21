@@ -34,17 +34,20 @@ def str_afvang(vraag:str, optie_1:str, optie_2:str):
             tekst("Sorry, dat snap ik niet...\n")
             print("")
 
-
-
+def             
+# bonnetje
 def bon():
     a = d.bol*d.prijs_bol
     b = d.hoorntje*d.prijs_hoorntje
     c = d.bakje*d.prijs_bakje
-    print('-------["Papi Gelato"]---------')
-    print("")
-    print(f"Bolletjes  {d.bol} x {d.prijs_bol:.2f} = € {a:.2f}")
-    print(f"Hoorntjes   {d.hoorntje} x {d.prijs_hoorntje:.2f} = €  {b:.2f}")
-    print(f"Bakje       {d.bakje} x {d.prijs_bakje:.2f} = €  {c:.2f}")
-    print("                     --------- +")
-    print(f"Totaal               = € {a+b+c:.2f}")
-bon()
+    if d.bol>0 or d.hoorntje >0 or d.bakje>0:
+        print('-------["Papi Gelato"]---------')
+        print("")
+        if d.bol >0:
+            print(f"Bolletjes {d.bol:4.0f} x {d.prijs_bol:.2f}   = €{a:6.2f}")
+        if d.hoorntje >0:
+            print(f"Hoorntjes {d.hoorntje:4.0f} x {d.prijs_hoorntje:.2f}   = €{b:6.2f}")
+        if d.bakje>0:
+            print(f"Bakje     {d.bakje:4.0f} x {d.prijs_bakje:.2f}   = €{c:6.2f}")
+        print(f"{'--------- +':>35}")
+        print(f"{'Totaal':<24} = € {a+b+c:.2f}")
