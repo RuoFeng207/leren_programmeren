@@ -22,7 +22,7 @@ def int_afvang(vraag:str):
             tekst("Sorry, dat snap ik niet...\n")
             print("")
 
-def str_afvang(vraag:str, optie_1:str, optie_2:str):
+def str_afvang(vraag:str, optie_1:str, optie_2:str, optie_3:str,optie_4:str):
     while True:
         tekst(f"{vraag}\n")
         antwoord = input().lower()
@@ -30,24 +30,33 @@ def str_afvang(vraag:str, optie_1:str, optie_2:str):
             return optie_1
         elif antwoord == optie_2:
             return optie_2
+        elif antwoord == optie_3:
+            if optie_3 != None:
+                return optie_3
+        elif antwoord == optie_4:
+            if optie_4 != None:
+                return optie_4
         else:
             tekst("Sorry, dat snap ik niet...\n")
             print("")
 
-def             
-# bonnetje
+
+def smaak(smaak_bol:str):
+    naam = d.smaken[smaak_bol]["naam"]
+    aantal = d.smaken[smaak_bol]["aantal"]
+    prijs = d.smaken[smaak_bol]["prijs"]
+    som = aantal*prijs
+    print(f"{naam} {aantal:3.0f} x {prijs:.2f}{'= €':>6}{som:5.2f}")
+    return som
+    
+
 def bon():
-    a = d.bol*d.prijs_bol
-    b = d.hoorntje*d.prijs_hoorntje
-    c = d.bakje*d.prijs_bakje
-    if d.bol>0 or d.hoorntje >0 or d.bakje>0:
-        print('-------["Papi Gelato"]---------')
-        print("")
-        if d.bol >0:
-            print(f"Bolletjes {d.bol:4.0f} x {d.prijs_bol:.2f}   = €{a:6.2f}")
-        if d.hoorntje >0:
-            print(f"Hoorntjes {d.hoorntje:4.0f} x {d.prijs_hoorntje:.2f}   = €{b:6.2f}")
-        if d.bakje>0:
-            print(f"Bakje     {d.bakje:4.0f} x {d.prijs_bakje:.2f}   = €{c:6.2f}")
-        print(f"{'--------- +':>35}")
-        print(f"{'Totaal':<24} = € {a+b+c:.2f}")
+    som = 0
+    
+    if som > 0:
+        print(f"{'-------- +':>33}")
+        print(f"{'Totaal':<22} = € {som:.2f}")
+    else:
+        print("Je hebt niks")
+
+bon()
