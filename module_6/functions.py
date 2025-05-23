@@ -50,13 +50,13 @@ def smaak(smaak_bol:str):
     return som
     
 
-def bon():
-    som = 0
+# def bon():
+#     som = 0
     
-    if som > 0:
-        print(f"{'-------- +':>33}")
-        print(f"{'Totaal':<22} = € {som:.2f}")
-    else:
-        print("Je hebt niks")
+#     if som > 0:
+#         print(f"{'-------- +':>33}")
+#         print(f"{'Totaal':<22} = € {som:.2f}")
+#     else:
+#         print("Je hebt niks")
 
-bon()
+# bon()
