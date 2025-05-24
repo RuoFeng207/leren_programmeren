@@ -10,7 +10,7 @@ prijs = {
 smaken = {
     "aardbei": {
         "naam":"B.Aardbei",
-        "aantal":1,
+        "aantal":0,
         "prijs":1.10
     },
     "chocolade": {
@@ -39,5 +39,18 @@ houders = {
         "naam":"Hoortje",
         "aantal":0,
         "prijs":1.25
+    }
+}
+
+keus = {
+    "ja/nee":{
+        "J":"ja",
+        "N":"nee",
+    },
+    "smaak":{
+        "A":"aardbei",
+        "C":"chocolade",
+        "M":"mint",
+        "V":"vanile"
     }
 }

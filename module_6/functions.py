@@ -5,41 +5,40 @@ import time,sys,data
 d = data
 
 # type writhing
-def tekst(woord:str):
+def tekst(woord: str, newline: bool = True):
     for letter in woord:
         time.sleep(d.tekst_snelheid)
         sys.stdout.write(letter)
         sys.stdout.flush()
+    if newline:
+        sys.stdout.write('\n')
+        sys.stdout.flush()
+
 
 # vraag en fout afhang
 def int_afvang(vraag:str):
     while True:
-        tekst(f"{vraag}\n")
+        tekst(vraag)
         try:
             antwoord = int(input())
             return antwoord
         except ValueError:
-            tekst("Sorry, dat snap ik niet...\n")
+            tekst("Sorry, dat snap ik niet...")
             print("")
 
-def str_afvang(vraag:str, optie_1:str, optie_2:str, optie_3:str,optie_4:str):
+def str_afvang(vraag: str, keus:dict):
     while True:
-        tekst(f"{vraag}\n")
-        antwoord = input().lower()
-        if antwoord == optie_1:
-            return optie_1
-        elif antwoord == optie_2:
-            return optie_2
-        elif antwoord == optie_3:
-            if optie_3 != None:
-                return optie_3
-        elif antwoord == optie_4:
-            if optie_4 != None:
-                return optie_4
-        else:
-            tekst("Sorry, dat snap ik niet...\n")
-            print("")
+        tekst(vraag)
+        optie_tekst = ", ".join(f"{sleutel}: {optie}" for sleutel, optie in keus.items()) 
+        tekst(optie_tekst)
+        
+        antwoord = input().capitalize()
 
+        if antwoord in keus:
+            return keus[antwoord]
+        else:
+            tekst("Sorry, dat snap ik niet...")
+            print("")
 
 def smaak(smaak_bol:str):
     naam = d.smaken[smaak_bol]["naam"]
