@@ -1,4 +1,5 @@
 tekst_snelheid = 0.0
+totaal = []
 # prijs 
 prijs = {
     "prijs_bol":1.10,
@@ -52,5 +53,9 @@ keus = {
         "C":"chocolade",
         "M":"mint",
         "V":"vanile"
+    },
+    "houder":{
+        "H":"hoortje",
+        "B":"bakje"
     }
 }

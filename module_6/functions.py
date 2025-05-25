@@ -29,7 +29,7 @@ def int_afvang(vraag:str):
 def str_afvang(vraag: str, keus:dict):
     while True:
         tekst(vraag)
-        optie_tekst = ", ".join(f"{sleutel}: {optie}" for sleutel, optie in keus.items()) 
+        optie_tekst = ", ".join(f"{sleutel}) {optie}" for sleutel, optie in keus.items()) 
         tekst(optie_tekst)
         
         antwoord = input().capitalize()

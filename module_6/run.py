@@ -9,13 +9,18 @@ while True:
     bollen = f.int_afvang("Hoe veel bolletjes wilt u?")
     # vraag houder
     if bollen >0 and bollen <4:
-        pass
+        item =f.str_afvang("Wilt u een hoorntje of een bakje?",d.keus["houder"])
+        d.houders[item]["aantal"] +=1
+        d.totaal.append(d.houders[item]["prijs"])
+        break    
     elif bollen >3 and bollen < 9:
         f.tekst(f"Dan krijgt u van mij een bakje met {bollen} bolletjes")
+        d.totaal.append(d.houders["bakje"]["prijs"])
         break
     else:
         f.tekst("Zulke groten bollen verkopen we niet")
 for bol in range(1,bollen+1):
     print("")
-    key = f.str_afvang(f"Welke smaak wilt u voor bol nr {bol}?",d.keus["smaak"])
-    d.smaken[key]["aantal"] +=1 
+    item = f.str_afvang(f"Welke smaak wilt u voor bol nr {bol}?",d.keus["smaak"])
+    d.smaken[item]["aantal"] +=1
+    d.totaal.append(d.smaken[item]["prijs"])
