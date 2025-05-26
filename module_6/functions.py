@@ -40,22 +40,25 @@ def str_afvang(vraag: str, keus:dict):
             tekst("Sorry, dat snap ik niet...")
             print("")
 
-def smaak(smaak_bol:str):
-    naam = d.smaken[smaak_bol]["naam"]
-    aantal = d.smaken[smaak_bol]["aantal"]
-    prijs = d.smaken[smaak_bol]["prijs"]
-    som = aantal*prijs
-    print(f"{naam} {aantal:3.0f} x {prijs:.2f}{'= €':>6}{som:5.2f}")
-    return som
-    
+def gegevens_bon(dictonary):
+    afstand = 14
+    for _, info in dictonary.items():
+        woord = info['naam']
+        prijs = info['aantal'] * info['prijs']
+        tussen_lengte = afstand - len(woord)
+        tussen = ' ' * tussen_lengte if tussen_lengte > 0 else ''
+        if info['aantal'] > 0:
+            print(f"{woord}{tussen}{info['aantal']} x €{info['prijs']:.2f}{'':>3}= €{prijs:.2f}")
+            d.totaal.append(prijs)
 
-# def bon():
-#     som = 0
-    
-#     if som > 0:
-#         print(f"{'-------- +':>33}")
-#         print(f"{'Totaal':<22} = € {som:.2f}")
-#     else:
-#         print("Je hebt niks")
+def toon_bon():
+    print('---------["Papi Gelato"]---------')
+    gegevens_bon(d.smaken)
+    gegevens_bon(d.houders)
 
-# bon()
+    som = sum(d.totaal)
+    if som > 0:
+        print(f"{'-------- +':>36}")
+        print(f"{'Totaal'}{"":>19} = €{som:.2f}")
+    else:
+        print(f"{'':>6}Je hebt niks besteld")
