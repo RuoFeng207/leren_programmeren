@@ -28,4 +28,5 @@ while True:
         d.totaal.append(d.smaken[item]["prijs"])
     keus =f.str_afvang("Wilt u nog iets bestellen?",d.keus["ja/nee"])
     if keus == "nee":
+        f.toon_bon()
         break

@@ -42,6 +42,31 @@ houders = {
         "prijs":1.25
     }
 }
+toppings = {
+    "geen":{
+        "naam":"geen",
+        "aantal":0,
+        "prijs":0
+    },
+    "slagroom":{
+        "naam":"Slagroom",
+        "aantal":0,
+        "prijs":0.50
+    },
+    "sprinkels":{
+        "naam":"Sprinkels",
+        "aantal":0,
+        "prijs":0.30
+    },
+    "caramel_saus":{
+        "naam":"Cramel saus",
+        "aantal":0,
+        "prijs":{
+            "hoornje":0.90,
+            "bakje":0.60
+        }
+    },
+}
 
 keus = {
     "ja/nee":{
