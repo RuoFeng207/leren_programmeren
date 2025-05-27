@@ -55,6 +55,7 @@ def toon_bon():
     print('---------["Papi Gelato"]---------')
     gegevens_bon(d.smaken)
     gegevens_bon(d.houders)
+    gegevens_bon(d.toppings)
 
     som = sum(d.totaal)
     if som > 0:

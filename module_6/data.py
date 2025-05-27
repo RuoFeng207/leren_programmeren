@@ -82,5 +82,11 @@ keus = {
     "houder":{
         "H":"hoortje",
         "B":"bakje"
+    },
+    "toppings":{
+        "A":"Niks",
+        "B":"Slagroom",
+        "C":"Sprinkels",
+        "D":"Caramel saus"
     }
 }
