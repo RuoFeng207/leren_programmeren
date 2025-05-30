@@ -26,15 +26,16 @@ while True:
         keus_smaak = f.str_afvang(f"Welke smaak wilt u voor bol nr {bol}?",d.keus['smaak'])
         d.smaken[keus_smaak]['aantal'] +=1
         d.totaal.append(d.smaken[keus_smaak]['prijs'])
-    toppings= f.str_afvang("Wat voor toppings wilt u er bij?",d.keus['toppings'])
-    print(toppings)
-    if toppings == "Caramel saus":
-        if keus_houder == "H":
-            d.totaal.append(d.toppings['caramel_saus']['prijs']['hoorntje'])
+    keus_toppings =f.str_afvang("Wat voor toppings wilt u daar bij?",d.keus["toppings"])
+    if keus_toppings == "slagroom":
+        d.toppings[keus_toppings]['aantal'] +=1
+    if keus_toppings =="sprinkels":
+        d.toppings[keus_toppings]['aantal'] +=bollen
+    if keus_toppings == "caramel saus":
+        if keus_houder == "hoorntje":
+            d.totaal.append(d.toppings["caramel saus"]["prijs"]["hoortje"])
         else:
-            d.totaal.append(d.toppings['caramel_saus']['prijs']['bakje'])
-    else:
-        d.totaal.append(d.toppings['prijs'])
+            d.totaal.append(d.toppings["caramel saus"]["prijs"]["bakje"])
 
     keus =f.str_afvang("Wilt u nog iets bestellen?",d.keus['ja/nee'])
     if keus == "nee":
