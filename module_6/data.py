@@ -58,14 +58,15 @@ toppings = {
         "aantal":0,
         "prijs":0.30
     },
-    "caramel_saus":{
-        "naam":"Cramel saus",
-        "aantal":0,
-        "prijs":{
-            "hoornje":0.90,
-            "bakje":0.60
-        }
+    "caramel saus hoorntje":{
+        "naam":"Caramel saus",
+        "aantal":0
     },
+    "caramel saus bakje":{
+        "naam":"Caramel saus",
+        "aantal":0
+    }
+    
 }
 
 keus = {
@@ -84,9 +85,9 @@ keus = {
         "B":"bakje"
     },
     "toppings":{
-        "A":"Niks",
-        "B":"Slagroom",
-        "C":"Sprinkels",
-        "D":"Caramel saus"
+        "A":"niks",
+        "B":"slagroom",
+        "C":"sprinkels",
+        "D":"caramel saus"
     }
 }
