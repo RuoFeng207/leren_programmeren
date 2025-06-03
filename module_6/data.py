@@ -1,92 +1,99 @@
 tekst_snelheid = 0.0
 totaal = []
-# prijs 
+
+# prijzen 
 prijs = {
-    "prijs_bol":1.10,
-    "prijs_bakje":0.75,
-    "prijs_hoorntje":1.25,
-    "tot_prijs":0
+    "prijs_bol": 1.10,
+    "prijs_bakje": 0.75,
+    "prijs_hoorntje": 1.25,
+    "tot_prijs": 0
 }
-# aantal
+
+# smaken
 smaken = {
     "aardbei": {
-        "naam":"B.Aardbei",
-        "aantal":0,
-        "prijs":1.10
+        "naam": "B.Aardbei",
+        "aantal": 0,
+        "prijs": 1.10
     },
     "chocolade": {
-        "naam":"B.Chocolade",
-        "aantal":0,
-        "prijs":1.10
+        "naam": "B.Chocolade",
+        "aantal": 0,
+        "prijs": 1.10
     },
     "mint": {
-        "naam":"B.Mint",
-        "aantal":0,
-        "prijs":1.10
+        "naam": "B.Mint",
+        "aantal": 0,
+        "prijs": 1.10
     },
     "vanile": {
-        "naam":"B.Vanile",
-        "aantal":0,
-        "prijs":1.10
+        "naam": "B.Vanile",
+        "aantal": 0,
+        "prijs": 1.10
     }
 }
+
+# houders
 houders = {
     "bakje": {
-        "naam":"Bakje",
-        "aantal":0,
-        "prijs":0.75
+        "naam": "Bakje",
+        "aantal": 0,
+        "prijs": 0.75
     },
-    "hoortje": {
-        "naam":"Hoortje",
-        "aantal":0,
-        "prijs":1.25
+    "hoorntje": {
+        "naam": "Hoorntje",
+        "aantal": 0,
+        "prijs": 1.25
     }
 }
+
+# toppings
 toppings = {
-    "geen":{
-        "naam":"geen",
-        "aantal":0,
-        "prijs":0
+    "geen": {
+        "naam": "geen",
+        "aantal": 0,
+        "prijs": 0
     },
-    "slagroom":{
-        "naam":"Slagroom",
-        "aantal":0,
-        "prijs":0.50
+    "slagroom": {
+        "naam": "Slagroom",
+        "aantal": 0,
+        "prijs": 0.50
     },
-    "sprinkels":{
-        "naam":"Sprinkels",
-        "aantal":0,
-        "prijs":0.30
+    "sprinkels": {
+        "naam": "Sprinkels",
+        "aantal": 0,
+        "prijs": 0.30
     },
-    "caramel saus":{
-        "naam":"Caramel saus",
-        "aantal":0,
-        "prijs":{
-            "hoorntje":0.60,
-            "bakje":0.90
+    "caramel saus": {
+        "naam": "Caramel saus",
+        "aantal": 0,
+        "prijs": {
+            "hoorntje": 0.60,
+            "bakje": 0.90
         }
     }
 }
 
+# keuzes (input opties)
 keus = {
-    "ja/nee":{
-        "J":"ja",
-        "N":"nee",
+    "ja/nee": {
+        "J": "ja",
+        "N": "nee"
     },
-    "smaak":{
-        "A":"aardbei",
-        "C":"chocolade",
-        "M":"mint",
-        "V":"vanile"
+    "smaak": {
+        "A": "aardbei",
+        "C": "chocolade",
+        "M": "mint",
+        "V": "vanile"
     },
-    "houder":{
-        "H":"hoortje",
-        "B":"bakje"
+    "houder": {
+        "H": "hoorntje",
+        "B": "bakje"
     },
-    "toppings":{
-        "A":"geen",
-        "B":"slagroom",
-        "C":"sprinkels",
-        "D":"caramel saus"
+    "toppings": {
+        "A": "geen",
+        "B": "slagroom",
+        "C": "sprinkels",
+        "D": "caramel saus"
     }
 }
