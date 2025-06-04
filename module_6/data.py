@@ -1,7 +1,6 @@
 tekst_snelheid = 0.0
 totaal = []
 
-# prijzen 
 prijs = {
     "prijs_bol": 1.10,
     "prijs_bakje": 0.75,
@@ -9,7 +8,6 @@ prijs = {
     "tot_prijs": 0
 }
 
-# smaken
 smaken = {
     "aardbei": {
         "naam": "B.Aardbei",
@@ -33,7 +31,6 @@ smaken = {
     }
 }
 
-# houders
 houders = {
     "bakje": {
         "naam": "Bakje",
@@ -47,7 +44,6 @@ houders = {
     }
 }
 
-# toppings
 toppings = {
     "geen": {
         "naam": "geen",
@@ -66,7 +62,10 @@ toppings = {
     },
     "caramel saus": {
         "naam": "Caramel saus",
-        "aantal": 0,
+        "aantal": {
+            "hoorntje": 0,
+            "bakje": 0
+        },
         "prijs": {
             "hoorntje": 0.60,
             "bakje": 0.90
@@ -74,7 +73,7 @@ toppings = {
     }
 }
 
-# keuzes (input opties)
+
 keus = {
     "ja/nee": {
         "J": "ja",

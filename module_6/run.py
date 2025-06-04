@@ -1,6 +1,7 @@
-import functions,data 
-d= data
+import functions
+import data
 f = functions
+d = data
 
 f.tekst("Welkom bij Papi Gelato, je mag alle smaken kiezen zolang het maar vanille ijs is.")
 
@@ -14,6 +15,7 @@ while True:
         elif 3 < bollen < 9:
             f.tekst(f"Dan krijgt u van mij een bakje met {bollen} bolletjes")
             d.houders['bakje']['aantal'] += 1
+            keus_houder = 'bakje'  
             break
         elif bollen >= 9:
             f.tekst("Zulke grote bollen verkopen we niet.")
@@ -32,10 +34,11 @@ while True:
     elif keus_toppings == "sprinkels":
         d.toppings[keus_toppings]['aantal'] += bollen
     elif keus_toppings == "caramel saus":
-        d.toppings[keus_toppings]['aantal'] += 1
+        
+        d.toppings[keus_toppings]['aantal'][keus_houder] += 1
 
-    keus = f.str_afvang("Wilt u nog iets bestellen?", d.keus['ja/nee'])
-    if keus == "nee":
+    keus = f.tekst("Wilt u nog een keer")
+    if keus != "":
         f.toon_bon()
         f.reset_bestelling()
         break
