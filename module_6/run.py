@@ -37,8 +37,12 @@ while True:
         
         d.toppings[keus_toppings]['aantal'][keus_houder] += 1
 
-    keus = f.tekst("Wilt u nog een keer")
-    if keus != "":
+    keus = f.tekst("Wilt u nog iets bestellen? [druk op enter om nog iets te bestellen]")
+    keus = input()
+    if keus == "":
+        f.tekst("Oke")
+        print("")
+    else:
         f.toon_bon()
         f.reset_bestelling()
         break
