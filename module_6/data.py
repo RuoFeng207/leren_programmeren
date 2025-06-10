@@ -48,13 +48,13 @@ ijs_winkel = [
 # houders
 [  
     {
-        "type": "Hoorntje",
+        "naam": "Hoorntje",
         "aantal": 0,
         "prijs": 1.25,
         "afkorting": "H"
     },
     {
-        "type": "Bekertje",
+        "naam": "Bekertje",
         "aantal": 0,
         "prijs": 0.75,
         "afkorting": "B"
