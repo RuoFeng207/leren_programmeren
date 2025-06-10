@@ -1,102 +1,90 @@
 tekst_snelheid = 0.0
 totaal = []
 
-prijs = {
-    "prijs_bol": 1.10,
-    "prijs_bakje": 0.75,
-    "prijs_hoorntje": 1.25,
-    "tot_prijs": 0
-}
-
-smaken = {
-    "aardbei": {
+ijs_winkel = [
+# klant
+[
+{
+    "naam": "particuliere klant",
+    "particuliere klant": False,
+    "afkorting": "1"
+    },
+    {
+    "naam": "zakelijke klant",
+    "zakelijke klant": False,
+    "afkorting": "2"}
+    ],
+# smaken
+[  
+    {
         "naam": "B.Aardbei",
         "aantal": 0,
-        "prijs": {"klant":1.10,
-                  "bedrijf":9.80}
+        "prijs": {"klant": 1.10,
+                    "bedrijf": 9.80},
+        "afkorting": "A"
     },
-    "chocolade": {
+    {
         "naam": "B.Chocolade",
         "aantal": 0,
-        "prijs": {"klant":1.10,
-                  "bedrijf":9.80}
+        "prijs": {"klant": 1.10,
+                    "bedrijf": 9.80},
+        "afkorting": "C"
     },
-    "mint": {
+    {
         "naam": "B.Mint",
         "aantal": 0,
-        "prijs": {"klant":1.10,
-                  "bedrijf":9.80}
+        "prijs": {"klant": 1.10,
+                    "bedrijf": 9.80},
+        "afkorting": "M"
     },
-    "vanile": {
+    {
         "naam": "B.Vanile",
         "aantal": 0,
-        "prijs": {"klant":1.10,
-                  "bedrijf":9.80}
+        "prijs": {"klant": 1.10,
+                    "bedrijf": 9.80},
+        "afkorting": "V"
     }
-}
-
-houders = {
-    "bakje": {
-        "naam": "Bakje",
+],
+# houders
+[  
+    {
+        "type": "Hoorntje",
         "aantal": 0,
-        "prijs": 0.75
+        "prijs": 1.25,
+        "afkorting": "H"
     },
-    "hoorntje": {
-        "naam": "Hoorntje",
+    {
+        "type": "Bekertje",
         "aantal": 0,
-        "prijs": 1.25
+        "prijs": 0.75,
+        "afkorting": "B"
     }
-}
-
-toppings = {
-    "geen": {
+],
+# sprinkels
+[{
         "naam": "geen",
         "aantal": 0,
-        "prijs": 0
-    },
-    "slagroom": {
+        "prijs": 0,
+        "afkorting": "A"
+    },{
         "naam": "Slagroom",
         "aantal": 0,
-        "prijs": 0.50
-    },
-    "sprinkels": {
+        "prijs": 0.50,
+        "afkorting": "B"
+    },{
         "naam": "Sprinkels",
         "aantal": 0,
-        "prijs": 0.30
-    },
-    "caramel saus": {
-        "naam": "Caramel saus",
-        "aantal": {
-            "hoorntje": 0,
-            "bakje": 0
-        },
+        "prijs": 0.30,
+        "afkorting": "C"
+    },{
+        "naam": "caramel saus",
+        "aantal": 0,
         "prijs": {
-            "hoorntje": 0.60,
-            "bakje": 0.90
-        }
+            "Hoortje":0.60,
+            "Bakje":0.90
+        },
+        "afkorting": "D"
     }
-}
 
-
-keus = {
-    "klant": {
-        "1": "particuliere klant",
-        "2": "zakelijke klant"
-    },
-    "smaak": {
-        "A": "aardbei",
-        "C": "chocolade",
-        "M": "mint",
-        "V": "vanile"
-    },
-    "houder": {
-        "H": "hoorntje",
-        "B": "bakje"
-    },
-    "toppings": {
-        "A": "geen",
-        "B": "slagroom",
-        "C": "sprinkels",
-        "D": "caramel saus"
-    }
-}
+]
+]
