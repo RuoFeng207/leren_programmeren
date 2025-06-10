@@ -12,22 +12,26 @@ smaken = {
     "aardbei": {
         "naam": "B.Aardbei",
         "aantal": 0,
-        "prijs": 1.10
+        "prijs": {"klant":1.10,
+                  "bedrijf":9.80}
     },
     "chocolade": {
         "naam": "B.Chocolade",
         "aantal": 0,
-        "prijs": 1.10
+        "prijs": {"klant":1.10,
+                  "bedrijf":9.80}
     },
     "mint": {
         "naam": "B.Mint",
         "aantal": 0,
-        "prijs": 1.10
+        "prijs": {"klant":1.10,
+                  "bedrijf":9.80}
     },
     "vanile": {
         "naam": "B.Vanile",
         "aantal": 0,
-        "prijs": 1.10
+        "prijs": {"klant":1.10,
+                  "bedrijf":9.80}
     }
 }
 
@@ -75,9 +79,9 @@ toppings = {
 
 
 keus = {
-    "ja/nee": {
-        "J": "ja",
-        "N": "nee"
+    "klant": {
+        "1": "particuliere klant",
+        "2": "zakelijke klant"
     },
     "smaak": {
         "A": "aardbei",

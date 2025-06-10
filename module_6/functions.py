@@ -35,46 +35,50 @@ def str_afvang(vraag: str, keus: dict):
             tekst("Sorry, dat snap ik niet...")
             print("")
 
-def gegevens_bon(dictonary, houder_keuze=None):
-    afstand = 17
-    subtotal = 0
+# def gegevens_bon(dictonary, houder_keuze=None):
+#     afstand = 17
+#     subtotal = 0
 
-    for _, info in dictonary.items():
-        woord = info['naam']
-        if isinstance(info['prijs'], dict):
-            if isinstance(info['aantal'], dict):
-                for houder, aantal in info['aantal'].items():
-                    prijs_per_stuk = info['prijs'].get(houder, 0)
-                    prijs = aantal * prijs_per_stuk
-                    subtotal += prijs
-                    if aantal > 0:
-                        if houder == "hoorntje":
-                            afk = "H"
-                        else:
-                            afk = "B"
-                        woord_houder = f"{woord} ({afk})"
-                        tussen_lengte = afstand - len(woord_houder)
-                        tussen = ' ' * tussen_lengte if tussen_lengte > 0 else ''
-                        print(f"{woord_houder}{tussen}{aantal} x €{prijs_per_stuk:.2f}{'':>3}= €{prijs:.2f}")
-            else:
-                prijs_per_stuk = info['prijs'].get(houder_keuze, 0) if houder_keuze else 0
-                prijs = info['aantal'] * prijs_per_stuk
-                subtotal += prijs
-                if info['aantal'] > 0:
-                    tussen_lengte = afstand - len(woord)
-                    tussen = ' ' * tussen_lengte if tussen_lengte > 0 else ''
-                    print(f"{woord}{tussen}{info['aantal']} x €{prijs_per_stuk:.2f}{'':>3}= €{prijs:.2f}")
-        else:
-            prijs_per_stuk = info['prijs']
-            prijs = info['aantal'] * prijs_per_stuk
-            subtotal += prijs
-            if info['aantal'] > 0:
-                tussen_lengte = afstand - len(woord)
-                tussen = ' ' * tussen_lengte if tussen_lengte > 0 else ''
-                print(f"{woord}{tussen}{info['aantal']} x €{prijs_per_stuk:.2f}{'':>3}= €{prijs:.2f}")
+#     for _, info in dictonary.items():
+#         woord = info['naam']
+#         if isinstance(info['prijs'], dict):
+#             if isinstance(info['aantal'], dict):
+#                 for houder, aantal in info['aantal'].items():
+#                     prijs_per_stuk = info['prijs'].get(houder, 0)
+#                     prijs = aantal * prijs_per_stuk
+#                     subtotal += prijs
+#                     if aantal > 0:
+#                         if houder == "hoorntje":
+#                             afk = "H"
+#                         else:
+#                             afk = "B"
+#                         woord_houder = f"{woord} ({afk})"
+#                         tussen_lengte = afstand - len(woord_houder)
+#                         tussen = ' ' * tussen_lengte if tussen_lengte > 0 else ''
+#                         print(f"{woord_houder}{tussen}{aantal} x €{prijs_per_stuk:.2f}{'':>3}= €{prijs:.2f}")
+#             else:
+#                 prijs_per_stuk = info['prijs'].get(houder_keuze, 0) if houder_keuze else 0
+#                 prijs = info['aantal'] * prijs_per_stuk
+#                 subtotal += prijs
+#                 if info['aantal'] > 0:
+#                     tussen_lengte = afstand - len(woord)
+#                     tussen = ' ' * tussen_lengte if tussen_lengte > 0 else ''
+#                     print(f"{woord}{tussen}{info['aantal']} x €{prijs_per_stuk:.2f}{'':>3}= €{prijs:.2f}")
+#         else:
+#             prijs_per_stuk = info['prijs']
+#             prijs = info['aantal'] * prijs_per_stuk
+#             subtotal += prijs
+#             if info['aantal'] > 0:
+#                 tussen_lengte = afstand - len(woord)
+#                 tussen = ' ' * tussen_lengte if tussen_lengte > 0 else ''
+#                 print(f"{woord}{tussen}{info['aantal']} x €{prijs_per_stuk:.2f}{'':>3}= €{prijs:.2f}")
 
-    return subtotal
+#     return subtotal
 
+
+
+def gegevens_bon():
+    
 
 def toon_bon():
     print('----------["Papi Gelato"]-----------')
