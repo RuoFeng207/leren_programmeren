@@ -51,8 +51,38 @@ def brekening():
     #bakje
     elif d.ijs_winkel[2][1]['aantal'] >0:
         pass
-    
 
-print(type(d.ijs_winkel[2][0]['aantal']))
-print(type(d.ijs_winkel[2][0]['prijs']))
-print(f"{d.ijs_winkel[2][0]['aantal']} x {d.ijs_winkel[2][0]['prijs']} = {d.ijs_winkel[2][0]['aantal']*d.ijs_winkel[2][0]['prijs']}")
+
+
+def berekening1(lijst_index):
+    for item in d.ijs_winkel[lijst_index]:
+        naam = item['naam']
+        aantal = item['aantal']
+        prijs = item['prijs']  # altijd float
+        totaal = aantal * prijs
+        if aantal>0:
+            print(f"{naam:12} {aantal:5} x {prijs:5.2f} = {totaal:6.2f}")
+
+def berekening2(lijst_index, prijs_key):
+    for item in d.ijs_winkel[lijst_index]:
+        naam = item['naam']
+        aantal = item['aantal']
+        prijs = item['prijs']
+
+        if isinstance(prijs, dict):
+            prijs = prijs.get(prijs_key, 0)
+        totaal = aantal * prijs
+        if aantal>0:
+            print(f"{naam:12} {aantal:5} x {prijs:5.2f} = {totaal:6.2f}")
+
+berekening2(1,"klant")    # smaken
+berekening1(2)             # houders
+berekening2(3, 'Hoortje')    # sprinkels
+d.ijs_winkel[0][0]['particuliere klant'] = True
+print(d.ijs_winkel[0][0]['particuliere klant'])
+# # smaak
+# print(d.ijs_winkel[1][0]['prijs']['klant'])
+# # houders
+# print (d.ijs_winkel[2][0]['prijs'])
+# #sprinkels
+# print (d.ijs_winkel[3][0]['prijs'])

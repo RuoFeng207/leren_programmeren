@@ -5,6 +5,7 @@ f.tekst("Welkom bij Papi Gelato, je mag alle smaken kiezen zolang het maar vanil
 klant = f.str_afvang("Bent u een particuliere klant of een zakelijke klant?",0)
 
 if klant == d.ijs_winkel[0][0]['afkorting']:
+    d.ijs_winkel[0][0]['particuliere klant'] = True
     while True:
         bollen = f.int_afvang("Hoeveel bolletjes wilt u?")
     
