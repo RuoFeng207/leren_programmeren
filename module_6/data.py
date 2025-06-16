@@ -73,7 +73,7 @@ ijs_winkel = [
         "afkorting": "B"
     },{
         "naam": "Sprinkels",
-        "aantal": 1,
+        "aantal": 0,
         "prijs": 0.30,
         "afkorting": "C"
     },{

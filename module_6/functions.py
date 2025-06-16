@@ -2,7 +2,6 @@ import time
 import sys
 import data as d 
 
-
 def tekst(woord: str, newline: bool = True):
     for letter in woord:
         time.sleep(d.tekst_snelheid)
@@ -44,15 +43,6 @@ def str_afvang(vraag:str,lijst:int):
         else:
             break
     return antwoord
-def brekening():
-    # hoortje
-    if d.ijs_winkel[2][0]['aantal'] >0:
-        print(f"{d.ijs_winkel[2][0]['aantal']} x {d.ijs_winkel[2][0]['prijs']} = {d.ijs_winkel[2][0]['aantal']*{d.ijs_winkel[2][0]['prijs']}}")
-    #bakje
-    elif d.ijs_winkel[2][1]['aantal'] >0:
-        pass
-
-
 
 def berekening1(lijst_index):
     for item in d.ijs_winkel[lijst_index]:
@@ -61,7 +51,9 @@ def berekening1(lijst_index):
         prijs = item['prijs']  # altijd float
         totaal = aantal * prijs
         if aantal>0:
-            print(f"{naam:12} {aantal:5} x {prijs:5.2f} = {totaal:6.2f}")
+            print(f"{naam:12} {aantal:5} x €{prijs:.2f} =  €{totaal:.2f}")
+            d.totaal.append(totaal)
+    return lijst_index
 
 def berekening2(lijst_index, prijs_key):
     for item in d.ijs_winkel[lijst_index]:
@@ -70,19 +62,18 @@ def berekening2(lijst_index, prijs_key):
         prijs = item['prijs']
 
         if isinstance(prijs, dict):
-            prijs = prijs.get(prijs_key, 0)
+            prijs = prijs[prijs_key]
         totaal = aantal * prijs
         if aantal>0:
-            print(f"{naam:12} {aantal:5} x {prijs:5.2f} = {totaal:6.2f}")
+            print(f"{naam:12} {aantal:5} x €{prijs:.2f} =  €{totaal:.2f}")
+            d.totaal.append(totaal)
+    return lijst_index, prijs_key
 
-berekening2(1,"klant")    # smaken
-berekening1(2)             # houders
-berekening2(3, 'Hoortje')    # sprinkels
-d.ijs_winkel[0][0]['particuliere klant'] = True
-print(d.ijs_winkel[0][0]['particuliere klant'])
-# # smaak
-# print(d.ijs_winkel[1][0]['prijs']['klant'])
-# # houders
-# print (d.ijs_winkel[2][0]['prijs'])
-# #sprinkels
-# print (d.ijs_winkel[3][0]['prijs'])
+def bon():
+    print("----------['Papi Gelato']----------")
+    berekening2(1,"klant")    # smaken
+    berekening1(2)             # houders
+    berekening2(3, 'Hoortje')    # sprinkels
+    som = sum(d.totaal)
+    print(f"{"---------+":>36}")
+    print(f"{"Totaaal":28} €{som:.2f}")
