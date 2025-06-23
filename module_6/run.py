@@ -41,15 +41,20 @@ while True:
         elif keus_smaak == "V":
             d.ijs_winkel[1][3]["aantal"]+=1 # vanile
 
-    toppings = f.str_afvang("Wat voor toppings wilt u daarbij?",3)
-    if toppings == "B":
-        d.ijs_winkel[3][1]["aantal"]+=1 # slagroom
-    elif toppings == "C":
-        d.ijs_winkel[3][2]["aantal"]+=1 # sprinkels
-    elif toppings == "D":
-        d.ijs_winkel[3][3]["aantal"]+=1 # caramel saus
-    f.tekst("Wilt u nog eens? [druk dan op Enter]")
-    nog_eens = input()
-    if nog_eens != "":
-        break
+    if klant == d.ijs_winkel[0][0]['afkorting']:
+        toppings = f.str_afvang("Wat voor toppings wilt u daarbij?",3)
+        if toppings == "B":
+            d.ijs_winkel[3][1]["aantal"]+=1 # slagroom
+        elif toppings == "C":
+            d.ijs_winkel[3][2]["aantal"]+=1 # sprinkels
+        elif toppings == "D":
+            d.ijs_winkel[3][3]["aantal"]+=1 # caramel saus
 
+    if klant == d.ijs_winkel[0][0]['afkorting']:
+        f.tekst("Wilt u nog eens? [druk dan op Enter]")
+        nog_eens = input()
+        if nog_eens != "":
+            break
+    else:
+        f.bon()
+        break

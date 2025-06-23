@@ -75,5 +75,10 @@ def bon():
     berekening1(2)             # houders
     berekening2(3, 'Hoortje')    # sprinkels
     som = sum(d.totaal)
+    
+        
     print(f"{"---------+":>36}")
-    print(f"{"Totaaal":28} €{som:.2f}")
+    if d.ijs_winkel[0][1]['zakelijke klant'] == True:
+        d.btw += (som/100)*9
+        print(f"{"BTW":29} €{d.btw:.2f}")
+    print(f"{"Totaal":29} €{som:.2f}")
