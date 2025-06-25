@@ -6,7 +6,10 @@ klant = f.str_afvang("Bent u een particuliere klant of een zakelijke klant?",0)
 
 
 while True:
-    d.ijs_winkel[0][0]['particuliere klant'] = True
+    if klant == d.ijs_winkel[0][0]['afkorting']:
+        d.ijs_winkel[0][0]['particuliere klant'] = True
+    elif klant == d.ijs_winkel[0][1]['afkorting']:
+        d.ijs_winkel[0][1]['zakelijke klant'] = True
     if klant == d.ijs_winkel[0][0]['afkorting']:
         while True:
             bollen = f.int_afvang("Hoeveel bolletjes wilt u?")
@@ -54,6 +57,7 @@ while True:
         f.tekst("Wilt u nog eens? [druk dan op Enter]")
         nog_eens = input()
         if nog_eens != "":
+            f.bon()
             break
     else:
         f.bon()
