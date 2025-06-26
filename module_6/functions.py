@@ -44,8 +44,8 @@ def str_afvang(vraag:str,lijst:int):
             break
     return antwoord
 
-def berekening1(lijst_index):
-    for item in d.ijs_winkel[lijst_index]:
+def print_houders(lijst):
+    for item in lijst:
         naam = item['naam']
         aantal = item['aantal']
         prijs = item['prijs']  # altijd float
@@ -53,10 +53,9 @@ def berekening1(lijst_index):
         if aantal>0:
             print(f"{naam:12} {aantal:5} x €{prijs:.2f} =  €{totaal:.2f}")
             d.totaal.append(totaal)
-    return lijst_index
 
-def berekening2(lijst_index, prijs_key):
-    for item in d.ijs_winkel[lijst_index]:
+def print_dubbele(lijst_index, prijs_key):
+    for item in lijst_index:
         naam = item['naam']
         aantal = item['aantal']
         prijs = item['prijs']
@@ -71,14 +70,18 @@ def berekening2(lijst_index, prijs_key):
 
 def bon():
     print("----------['Papi Gelato']----------")
-    berekening2(1,"klant")    # smaken
-    berekening1(2)             # houders
-    berekening2(3, 'Hoortje')    # sprinkels
-    som = sum(d.totaal)
+    prijs_smaak = "bedrijf" if d.ijs_winkel[0][1]['zakelijke klant'] else "klant"
+    print_dubbele(d.ijs_winkel[1], prijs_smaak)
+
+    print_houders(d.ijs_winkel[2])
     
-        
-    print(f"{"---------+":>36}")
-    if d.ijs_winkel[0][1]['zakelijke klant'] == True:
-        d.btw += (som/100)*9
-        print(f"{"BTW":29} €{d.btw:.2f}")
-    print(f"{"Totaal":29} €{som:.2f}")
+    saus_key = "Hoortje" if d.ijs_winkel[2][0]['aantal'] > 0 else "Bakje"
+    print_dubbele(d.ijs_winkel[3], saus_key)
+
+    som = sum(d.totaal)
+
+    print(f"{'---------+':>36}")
+    if d.ijs_winkel[0][1]['zakelijke klant']:
+        d.btw = som * 0.09
+        print(f"{'BTW':29} €{d.btw:.2f}")
+    print(f"{'Totaal':29} €{som:.2f}")

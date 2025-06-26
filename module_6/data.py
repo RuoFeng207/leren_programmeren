@@ -1,4 +1,4 @@
-tekst_snelheid = 0.03
+tekst_snelheid = 0.0
 totaal = []
 btw = 0
 ijs_winkel = [
