@@ -72,14 +72,10 @@ def bon():
     print("----------['Papi Gelato']----------")
     prijs_smaak = "bedrijf" if d.ijs_winkel[0][1]['zakelijke klant'] else "klant"
     print_dubbele(d.ijs_winkel[1], prijs_smaak)
-
     print_houders(d.ijs_winkel[2])
-    
     saus_key = "Hoortje" if d.ijs_winkel[2][0]['aantal'] > 0 else "Bakje"
     print_dubbele(d.ijs_winkel[3], saus_key)
-
     som = sum(d.totaal)
-
     print(f"{'---------+':>36}")
     if d.ijs_winkel[0][1]['zakelijke klant']:
         d.btw = som * 0.09
