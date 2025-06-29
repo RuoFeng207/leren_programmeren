@@ -50,8 +50,10 @@ while True:
             d.ijs_winkel[3][1]["aantal"]+=1 # slagroom
         elif toppings == "C":
             d.ijs_winkel[3][2]["aantal"]+=1 # sprinkels
-        elif toppings == "D":
-            d.ijs_winkel[3][3]["aantal"]+=1 # caramel saus
+        elif toppings == "D" and houder == "H":
+            d.ijs_winkel[3][3]["aantal.H"]+=1 # caramel saus
+        elif toppings == "D" and houder == "B":
+            d.ijs_winkel[3][3]["aantal.B"]+=1 # caramel saus
 
     if klant == d.ijs_winkel[0][0]['afkorting']:
         f.tekst("Wilt u nog eens? [druk dan op Enter]")

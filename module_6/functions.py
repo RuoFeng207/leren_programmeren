@@ -44,28 +44,36 @@ def str_afvang(vraag:str,lijst:int):
             break
     return antwoord
 
+def print_regel(naam,aantal,prijs):
+    totaal = aantal * prijs
+    if aantal>0:
+        print(f"{naam:12} {aantal:5} x €{prijs:.2f} =  €{totaal:.2f}")
+        d.totaal.append(totaal)
+
 def print_houders(lijst):
     for item in lijst:
         naam = item['naam']
         aantal = item['aantal']
         prijs = item['prijs']  # altijd float
-        totaal = aantal * prijs
-        if aantal>0:
-            print(f"{naam:12} {aantal:5} x €{prijs:.2f} =  €{totaal:.2f}")
-            d.totaal.append(totaal)
+        print_regel(naam,aantal,prijs)
 
 def print_dubbele(lijst_index, prijs_key):
     for item in lijst_index:
         naam = item['naam']
-        aantal = item['aantal']
-        prijs = item['prijs']
-
-        if isinstance(prijs, dict):
-            prijs = prijs[prijs_key]
-        totaal = aantal * prijs
-        if aantal>0:
-            print(f"{naam:12} {aantal:5} x €{prijs:.2f} =  €{totaal:.2f}")
-            d.totaal.append(totaal)
+        if "aantal.B" in item:
+            aantal = item["aantal.B"]
+            prijs = item["prijs"]["Bakje"]
+            print_regel(naam,aantal,prijs)
+            aantal = item["aantal.H"]
+            prijs = item["prijs"]["Hoortje"]
+            print_regel(naam,aantal,prijs)
+        else:
+            prijs = item['prijs']
+            if isinstance(prijs, dict):
+                prijs = prijs[prijs_key]
+            aantal = item['aantal']
+            print_regel(naam,aantal,prijs)
+            
     return lijst_index, prijs_key
 
 def bon():
@@ -78,6 +86,6 @@ def bon():
     som = sum(d.totaal)
     print(f"{'---------+':>36}")
     if d.ijs_winkel[0][1]['zakelijke klant']:
-        d.btw = som * 0.09
+        d.btw = som * 0.09 
         print(f"{'BTW':29} €{d.btw:.2f}")
     print(f"{'Totaal':29} €{som:.2f}")
