@@ -18,11 +18,11 @@ def int_afvang(vraag: str):
         try:
             antwoord = int(input())
             if antwoord <1:
-                tekst("Sorry, dat snap ik niet...")
+                tekst("Sorry, dat is geen optie die we aanbieden...")
             else:
                 break
         except ValueError:
-            tekst("Sorry, dat snap ik niet...")
+            tekst("Sorry, dat is geen optie die we aanbieden...")
     return antwoord
     
 def str_afvang(vraag:str,lijst:int):
