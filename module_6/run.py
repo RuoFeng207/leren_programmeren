@@ -1,7 +1,7 @@
 import functions as f
 import data as d
 
-f.tekst("Welkom bij Papi Gelato, je mag alle smaken kiezen zolang het maar vanille ijs is.")
+f.tekst("Welkom bij Papi Gelato!")
 klant = f.str_afvang("Bent u een particuliere klant of een zakelijke klant?",0)
 
 
