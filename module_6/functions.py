@@ -86,6 +86,6 @@ def bon():
     som = sum(d.totaal)
     print(f"{'---------+':>36}")
     if d.ijs_winkel[0][1]['zakelijke klant']:
-        d.btw = som * 0.09 
+        d.btw= som *d.btw_procent/100
         print(f"{'BTW':29} €{d.btw:.2f}")
     print(f"{'Totaal':29} €{som:.2f}")
