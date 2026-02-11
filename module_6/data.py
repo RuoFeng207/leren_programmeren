@@ -1,6 +1,7 @@
 tekst_snelheid = 0.0
 totaal = []
 btw = 0
+prijs_bol =  0,90
 ijs_winkel = [
 # klant
 [
@@ -19,28 +20,28 @@ ijs_winkel = [
     {
         "naam": "B.Aardbei",
         "aantal": 0,
-        "prijs": {"klant": 1.10,
+        "prijs": {"klant": prijs_bol,
                     "bedrijf": 9.80},
         "afkorting": "A"
     },
     {
         "naam": "B.Chocolade",
         "aantal": 0,
-        "prijs": {"klant": 1.10,
+        "prijs": {"klant": prijs_bol,
                     "bedrijf": 9.80},
         "afkorting": "C"
     },
     {
         "naam": "B.Mint",
         "aantal": 0,
-        "prijs": {"klant": 1.10,
+        "prijs": {"klant": prijs_bol,
                     "bedrijf": 9.80},
         "afkorting": "M"
     },
     {
         "naam": "B.Vanile",
         "aantal": 0,
-        "prijs": {"klant": 1.10,
+        "prijs": {"klant": prijs_bol,
                     "bedrijf": 9.80},
         "afkorting": "V"
     }
