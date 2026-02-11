@@ -39,7 +39,7 @@ def str_afvang(vraag:str,lijst:int):
             teller+=1
         antwoord = input().capitalize()
         if antwoord not in opties:
-            tekst("Sorry, dat snap ik niet")
+            tekst("Sorry, dat is geen optie die we aanbieden...")
         else:
             break
     return antwoord
