@@ -39,10 +39,8 @@ while True:
             d.ijs_winkel[1][0]["aantal"]+=1 # aarbei
         elif keus_smaak == "C":
             d.ijs_winkel[1][1]["aantal"]+=1 # chocolade
-        elif keus_smaak == "M":
-            d.ijs_winkel[1][2]["aantal"]+=1 # mint
         elif keus_smaak == "V":
-            d.ijs_winkel[1][3]["aantal"]+=1 # vanile
+            d.ijs_winkel[1][2]["aantal"]+=1 # vanile
 
     if klant == d.ijs_winkel[0][0]['afkorting']:
         toppings = f.str_afvang("Wat voor toppings wilt u daarbij?",3)

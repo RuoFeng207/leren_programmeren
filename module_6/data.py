@@ -32,13 +32,6 @@ ijs_winkel = [
         "afkorting": "C"
     },
     {
-        "naam": "B.Mint",
-        "aantal": 0,
-        "prijs": {"klant": prijs_bol,
-                    "bedrijf": 9.80},
-        "afkorting": "M"
-    },
-    {
         "naam": "B.Vanile",
         "aantal": 0,
         "prijs": {"klant": prijs_bol,
