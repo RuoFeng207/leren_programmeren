@@ -2,7 +2,7 @@ tekst_snelheid = 0.0
 totaal = []
 btw = 0
 btw_procent = 6
-prijs_bol =  0.90
+prijs_bol =  0.95
 ijs_winkel = [
 # klant
 [
