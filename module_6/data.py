@@ -81,5 +81,16 @@ ijs_winkel = [
         },
         "afkorting": "D"
     }
+],
+# nogeens
+[
+    {
+        "naam":"Yes",
+        "afkorting":"Y"
+    },
+    {
+        "naam":"No",
+        "afkorting":"N"
+    }
 ]
 ]

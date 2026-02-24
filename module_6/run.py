@@ -54,11 +54,12 @@ while True:
             d.ijs_winkel[3][3]["aantal.B"]+=1 # caramel saus
 
     if klant == d.ijs_winkel[0][0]['afkorting']:
-        f.tekst("Wilt u nog eens? [druk dan op Enter]")
-        nog_eens = input()
-        if nog_eens != "":
+        nog_eens = f.str_afvang("Wilt u nog eens?",4)
+        if nog_eens == "N":
             f.bon()
             break
+        else:
+            continue
     else:
         f.bon()
         break
