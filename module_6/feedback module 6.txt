@@ -1,0 +1,4 @@
+Geen while true,
+gebruik key ipv index voor aanduiding dictonary
+Voeg comments toe aan commit
+flowchart 3dubbel checken op dat alles accuraat is met de code
