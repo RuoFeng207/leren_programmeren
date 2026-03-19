@@ -1,0 +1,9 @@
+Dubble code kamer 3 op lijn: 170, 294, 369, 444, 532, 602
+Dubble code kamer 4 op lijn: 210, 333, 408, 571, 641
+Dubble code kamer 5 op lijn: 221, 345, 420, 489, 578, 648
+Dubble code kamer 8 op lijn: 263, 501
+Dubble code kamer 9 op lijn: 356, 589
+----------------------------------------------------------
+Maak functies voor: Keuze Afvang, Gokken, Random Som, Random Stat Buff, Markt
+Kijk naar de PlayerAttackEnemy functie //Dit is de gevechts functie
+Zet data in dictionary
