@@ -1,8 +1,8 @@
 delay = 3
-
+question = True
 player = {
     "attack": 1,
-    "defense": 0,
+    "defence": 0,
     "health": 3,
     "rupee_amount": 0
 }

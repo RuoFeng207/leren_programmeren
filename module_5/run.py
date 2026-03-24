@@ -1,9 +1,6 @@
-import time
-import random
-import data
-import functions as fun
+from functions import *
 
-# Kamer 1
-fun.print_slow('Door de twee grote deuren loop je een gang binnen.')
-fun.print_slow('Het ruikt hier muf en vochtig.')
-fun.print_slow('Je ziet een deur voor je.')
+# chamber_1()
+chamber_7()
+
+# chamber_9()
