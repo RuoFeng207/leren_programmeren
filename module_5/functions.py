@@ -3,7 +3,6 @@ import sys
 import time
 import random
 
-
 # Text typer function
 def print_slow(str:str) -> str:
     str = str.replace(".", ".\n")
@@ -13,17 +12,21 @@ def print_slow(str:str) -> str:
         sys.stdout.write(char)
         sys.stdout.flush()
 
-def choice(choice_1:str, choice_2:str) -> str:
+def choice(choice_1:str, choice_2:str, Q_type:str, action:str = None) -> str:
     while question:
-        print_slow('Je kan nu twee kanten op.')
-        print_slow(f'Ga je {choice_1} of {choice_2}?')
+        if (Q_type == 'direction'):
+            print_slow('Je kan nu twee kanten op, welke kant kies je?')
+        elif (Q_type == 'y/n'):
+            print_slow(f'Je kan hier {action}.')
+
+
+        print_slow(f'{choice_1} of {choice_2}?')
         answer = input().lower()
         if (answer not in (choice_1, choice_2)):
             print_slow('Deze optie is niet mogelijk.')
         else:
-            break
-        return answer
-
+            return answer
+        
 def buffs(chamber:int) -> int:
     if (chamber != 8):
         fate = random.randint(1,10)
@@ -61,23 +64,27 @@ def chamber_7():
     else:
         print_slow('Je ziet een rupee op de grond liggen.')
         print_slow(f'Je hebt nu {player["rupee_amount"]} rupee in je inventaris.')
-    answer = choice("rechtdoor", "links")
-    print(answer)
+    answer = choice("rechtdoor", "rechts","direction")
     return answer
 
 def chamber_8():
     fate, d1, d2 = buffs(8)
-    print(f'Je gooit een {d1} en een {d2} en dat komt op een {fate}.')
-    if fate == 7:
-        print_slow('Gefeliciteerd, omdat je precies een 7 hebt gerolt krijd je +4 levenspunte')
-        print_slow(f'Je hebt nu {player["health"]} levenspunten.')
-    elif fate > 7:
-        print_slow('Lekker gedaan, omdat je hoger dan een 7 hebt gerolt verdubblen je rupees')
-        print_slow(f'Je hebt nu {player["rupee_amount"]} rupees.')
+    print('Je gaat naar rechts en komt in een gok ruimte terecht.')
+    print('Je ziet ineens een machine staan waar je twee dobbelstenen gooit.')
+    answer = choice("ja", "nee","y/n","gokken")
+    if (answer == "ja"):
+        print(f'Je gooit een {d1} en een {d2} en dat komt op een {fate}.')
+        if fate == 7:
+            print_slow('Gefeliciteerd, omdat je precies een 7 hebt gerolt krijd je +4 levenspunte')
+            print_slow(f'Je hebt nu {player["health"]} levenspunten.')
+        elif fate > 7:
+            print_slow('Lekker gedaan, omdat je hoger dan een 7 hebt gerolt verdubblen je rupees')
+            print_slow(f'Je hebt nu {player["rupee_amount"]} rupees.')
+        else:
+            print_slow('Yikes, omdat je onder een 7 hebt gerolt verlies je een levenspunt.')
+            print_slow(f'Je hebt nu {player["health"]} levenspunten.')
     else:
-        print_slow('Yikes, omdat je onder een 7 hebt gerolt verlies je een levenspunt.')
-        print_slow(f'Je hebt nu {player["health"]} levenspunten.')
-
+            print_slow('Je besluit niet te gokken.')
 
 def chamber_9():
     fate = buffs(9)
