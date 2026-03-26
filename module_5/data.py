@@ -1,10 +1,10 @@
 delay = 3
-question = True
+running = True
 player = {
     "attack": 1,
     "defence": 0,
     "health": 3,
-    "rupee_amount": 0
+    "rupee_amount": 1
 }
 
 monster ={
@@ -23,5 +23,5 @@ monster ={
 items = {
     "zwaard": 2,
     "schild": 1,
-    "key": False
+    "sleutel": False
 }
