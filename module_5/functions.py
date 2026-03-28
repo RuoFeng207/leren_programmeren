@@ -80,7 +80,9 @@ def markt():
         else:
             print_slow('Je hebt niet genoeg rupees om iets te kopen.')
             break
-
+def fight():
+     while (player['health'] > 0 and monster['health'] > 0):
+         pass
 def chamber_1():
     print_slow('Door de twee grote deuren loop je een gang binnen.')
     print_slow('Het ruikt hier muf en vochtig.')
@@ -97,6 +99,12 @@ def chamber_3():
         markt()
     else:
         print_slow('Je besluit niks te kopen.')
+
+def chamber_4():
+    print_slow('Maar toen hoorde je een luid gebrul.')
+    print_slow('Het is een brute en hij ziet er niet vriendelijk uit.')
+    print("Hier komt de vecht functie")
+
 
 def chamber_7():
     fate= buffs(7)
@@ -131,7 +139,7 @@ def chamber_8():
         print_slow('Je besluit niet te gokken.')
     answer = choice('links','rechts','direction')
     if (answer == 'rechts'):
-        print('Hier komt kamer 3')
+        chamber_3()
     else:
         chamber_9()
 
