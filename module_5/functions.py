@@ -80,20 +80,20 @@ def markt():
         else:
             print_slow('Je hebt niet genoeg rupees om iets te kopen.')
             break
-def fight():
-     while (player['health'] > 0 and monster['health'] > 0):
-         pass
+
+
 def chamber_1():
-    print_slow('Door de twee grote deuren loop je een gang binnen.')
-    print_slow('Het ruikt hier muf en vochtig.')
-    print_slow('Je ziet een deur voor je.')
+    print_slow('Door de twee grote deuren loop je een gang binnen.'
+                'Het ruikt hier muf en vochtig'
+                '.Je ziet een deur voor je.')
     chamber_7()
 
 def chamber_3():
-    print_slow('Je loopt de kamer binnen en ziet een goblin.')
-    print_slow('De goblin verkoopt verschillende items.')
-    print_slow(f'ik zie dat je {player["rupee_amount"]} rupees hebt')
-    print_slow('De goblin zegt dat elk item 1 rupee kost.')
+    print_slow('Je loopt de kamer binnen en ziet een goblin.'
+                'De goblin verkoopt verschillende items.'
+                f'ik zie dat je {player["rupee_amount"]} rupees hebt'
+                'De goblin zegt dat elk item 1 rupee kost.')
+    
     answer =choice('ja','nee','y/n','iets kopen')
     if (answer == "ja"):
         markt()
@@ -101,9 +101,8 @@ def chamber_3():
         print_slow('Je besluit niks te kopen.')
 
 def chamber_4():
-    print_slow('Maar toen hoorde je een luid gebrul.')
-    print_slow('Het is een brute en hij ziet er niet vriendelijk uit.')
-    print("Hier komt de vecht functie")
+    print_slow('Maar toen hoorde je een luid gebrul.'
+                'Het is een brute en hij ziet er niet vriendelijk uit.')
 
 
 def chamber_7():
@@ -111,8 +110,9 @@ def chamber_7():
     if ( fate == 7):
         print_slow('Vreemd de kamer is leeg.')
     else:
-        print_slow('Je ziet een rupee op de grond liggen.')
-        print_slow(f'Je hebt nu {player['rupee_amount']} rupee in je inventaris.')
+        print_slow('Je ziet een rupee op de grond liggen.'
+                    f'Je hebt nu {player['rupee_amount']} rupee in je inventaris.')
+        
     answer = choice('rechtdoor', 'rechts','direction')
     if (answer == 'rechts'):
         chamber_8()
@@ -125,16 +125,16 @@ def chamber_8():
     print('Je ziet ineens een machine staan waar je twee dobbelstenen gooit.')
     answer = choice('ja', 'nee','y/n','gokken')
     if (answer == 'ja'):
-        print(f'Je gooit een {d1} en een {d2} en dat komt op een {fate}.')
+        print_slow(f'Je gooit een {d1} en een {d2} en dat komt op een {fate}.')
         if fate == 7:
-            print_slow('Gefeliciteerd, omdat je precies een 7 hebt gerolt krijd je +4 levenspunte')
-            print_slow(f'Je hebt nu {player["health"]} levenspunten.')
+            print_slow('Gefeliciteerd, omdat je precies een 7 hebt gerolt krijd je +4 levenspunte'
+                       f'Je hebt nu {player["health"]} levenspunten.')
         elif fate > 7:
-            print_slow('Lekker gedaan, omdat je hoger dan een 7 hebt gerolt verdubblen je rupees')
-            print_slow(f'Je hebt nu {player["rupee_amount"]} rupees.')
+            print_slow('Lekker gedaan, omdat je hoger dan een 7 hebt gerolt verdubblen je rupees'
+                       f'Je hebt nu {player["rupee_amount"]} rupees.')
         else:
-            print_slow('Yikes, omdat je onder een 7 hebt gerolt verlies je een levenspunt.')
-            print_slow(f'Je hebt nu {player["health"]} levenspunten.')
+            print_slow('Yikes, omdat je onder een 7 hebt gerolt verlies je een levenspunt.'
+                       f'Je hebt nu {player["health"]} levenspunten.')
     else:
         print_slow('Je besluit niet te gokken.')
     answer = choice('links','rechts','direction')
@@ -147,8 +147,8 @@ def chamber_9():
     fate = buffs(9)
     print_slow('Je voelt een soort magisch gevoel zodra je deze kamer binnenloopt.')
     if (fate %2 == 0 ):
-        print_slow('Je defense voelt ineens beter.')
-        print_slow(f'Je defence is nu {player["defence"]}.')
+        print_slow('Je defense voelt ineens beter.'
+                   f'Je defence is nu {player["defence"]}.')
     else:
-        print_slow('Je voelt je ineens beter en machtiger.')
-        print_slow(f'Je health is nu {player["health"]}.')
+        print_slow('Je voelt je ineens beter en machtiger.'
+                   f'Je health is nu {player["health"]}.')

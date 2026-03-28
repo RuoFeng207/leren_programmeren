@@ -7,7 +7,7 @@ player = {
     "rupee_amount": 1
 }
 
-monster ={
+enemy ={
     "zombie":{
         "attack": 1,
         "defense": 0,
