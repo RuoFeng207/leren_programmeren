@@ -1,4 +1,4 @@
-delay = 3
+delay = 0
 running = True
 player = {
     "attack": 1,
