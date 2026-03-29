@@ -2,7 +2,7 @@ delay = 0
 running = True
 player = {
     "attack": 1,
-    "defence": 0,
+    "defense": 0,
     "health": 3,
     "rupee_amount": 1
 }

@@ -81,11 +81,34 @@ def markt():
             print_slow('Je hebt niet genoeg rupees om iets te kopen.')
             break
 
+def fight(npc: str) -> str:
+    while player["health"] > 0 and enemy[npc]["health"] > 0:
+        player_hit_damage = player["attack"] - enemy[npc]["defense"]
+        if player_hit_damage > 0:
+            enemy[npc]["health"] = max(enemy[npc]["health"] - player_hit_damage, 0)
+            print(f'Je hebt tegen de {npc} {player_hit_damage} schade gedaan. '
+                  f'De {npc} heeft nu nog {enemy[npc]["health"]} health.')
+        else:
+            print(f'Je aanval doet geen schade aan de {npc}, yikes.')
+        if enemy[npc]["health"] <= 0:
+            print(f'Je hebt de {npc} verslagen!!!!!')
+            break
+
+        enemy_hit_damage = enemy[npc]["attack"] - player["defense"]
+        if enemy_hit_damage > 0:
+            player["health"] = max(player["health"] - enemy_hit_damage, 0)
+            print(f'De {npc} raakte je! Je hebt {enemy_hit_damage} schade gekregen. '
+                  f'Je health is nu {player["health"]}.')
+        else:
+            print(f'De {npc} doet geen schade aan je, yippie.')
+        if player["health"] <= 0:
+            print(f'Helaas is de {npc} te sterk voor je. Game over.')
+            break
 
 def chamber_1():
     print_slow('Door de twee grote deuren loop je een gang binnen.'
-                'Het ruikt hier muf en vochtig'
-                '.Je ziet een deur voor je.')
+                'Het ruikt hier muf en vochtig.'
+                'Je ziet een deur voor je.')
     chamber_7()
 
 def chamber_3():
