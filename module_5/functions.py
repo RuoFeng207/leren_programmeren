@@ -52,6 +52,21 @@ def buffs(chamber:int) -> int:
         return fate
     else:
         return fate, d1, d2
+def sum():
+    a = random.randint(10, 25)
+    b = random.randint(-5, 75)
+    gekozen_operator = random.choice(list(ops.keys()))
+    correct_answer = ops[gekozen_operator](a, b)
+    print (correct_answer)
+
+    while running:
+        try:
+            print_slow('Wat voer je in?')
+            input_answer = int(input())
+            break
+        except ValueError:
+            print_slow('Je kan enkel een heel cijfer in voeren.')
+    return a, b, gekozen_operator,input_answer,correct_answer
 
 def markt():
     display = list(items.keys())
@@ -86,12 +101,12 @@ def fight(npc: str) -> str:
         player_hit_damage = player["attack"] - enemy[npc]["defense"]
         if player_hit_damage > 0:
             enemy[npc]["health"] = max(enemy[npc]["health"] - player_hit_damage, 0)
-            print(f'Je hebt tegen de {npc} {player_hit_damage} schade gedaan. '
+            print_slow(f'Je hebt tegen de {npc} {player_hit_damage} schade gedaan.'
                   f'De {npc} heeft nu nog {enemy[npc]["health"]} health.')
         else:
-            print(f'Je aanval doet geen schade aan de {npc}, yikes.')
+            print_slow(f'Je aanval doet geen schade aan de {npc}, yikes.')
         if enemy[npc]["health"] <= 0:
-            print(f'Je hebt de {npc} verslagen!!!!!')
+            print_slow(f'Je hebt de {npc} verslagen!!!!!')
             break
 
         enemy_hit_damage = enemy[npc]["attack"] - player["defense"]
@@ -110,6 +125,18 @@ def chamber_1():
                 'Het ruikt hier muf en vochtig.'
                 'Je ziet een deur voor je.')
     chamber_7()
+def chamber_2():
+    a,b, gekozen_operator,input_answer,correct_answer=sum()   
+    print_slow('Je stapt door de deur heen en je ziet een standbeeld voor je.'
+        'Het standbeeld heeft een rupee vast.'
+        'Op zijn borst zit een numpad met de toetsen 9 t/m 0.'
+        f'Daarboven zie je een som staan: {a} {gekozen_operator} {b} = ?')
+    if input_answer == correct_answer:
+        print_slow('Het standbeeld laat de rupee vallen en je pakt het op.')
+        player['rupee_amount']+=1
+        print_slow(f'Je hebt nu {player['rupee_amount']} rupee in je inventaris.')
+    else:
+        print_slow('Er gebeurt niets.')
 
 def chamber_3():
     print_slow('Je loopt de kamer binnen en ziet een goblin.'
@@ -126,8 +153,20 @@ def chamber_3():
 def chamber_4():
     print_slow('Maar toen hoorde je een luid gebrul.'
                 'Het is een brute en hij ziet er niet vriendelijk uit.')
+    fight("brute")
+    if player['health']>0:
+        chamber_5()
 
-
+def chamber_5():
+    print_slow('Voorzichtig open je de deur, je wilt niet nog een brute of zombie tegenkomen.'
+               'Tot je verbazing zie je een schatkist in het midden van de kamer staan.'
+               'Je loopt er naartoe.')
+    if items["sleutel"] == True:
+        print_slow('Je hebt een sleutel, opent de kist en er zit goud in. '
+                   'Je wint het spel!')
+    else:
+        print_slow('Helaas heb je geen sleutel om de kist te openen en je verliest.'
+                   'Game over')
 def chamber_7():
     fate= buffs(7)
     if fate == 7:
@@ -140,7 +179,7 @@ def chamber_7():
     if answer == 'rechts':
         chamber_8()
     else:
-        print('Hier komt kamer 2')
+        chamber_2()
 
 def chamber_8():
     fate, d1, d2 = buffs(8)

@@ -1,7 +1,8 @@
+import operator
 delay = 0
 running = True
 player = {
-    "attack": 1,
+    "attack": 100,
     "defense": 0,
     "health": 3,
     "rupee_amount": 1
@@ -24,4 +25,9 @@ items = {
     "zwaard": 2,
     "schild": 1,
     "sleutel": False
+}
+ops = {
+    '+': operator.add,
+    '-': operator.sub,
+    '*': operator.mul
 }
