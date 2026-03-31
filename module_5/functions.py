@@ -52,21 +52,24 @@ def buffs(chamber:int) -> int:
         return fate
     else:
         return fate, d1, d2
-def sum():
+def sum(text):
     a = random.randint(10, 25)
     b = random.randint(-5, 75)
     gekozen_operator = random.choice(list(ops.keys()))
     correct_answer = ops[gekozen_operator](a, b)
     print (correct_answer)
-
     while running:
         try:
-            print_slow('Wat voer je in?')
-            input_answer = int(input())
-            break
+            print_slow(f'{text} {a} {gekozen_operator} {b} = ?'
+                  'Wat voer je in?')
+            answer = int(input())
         except ValueError:
             print_slow('Je kan enkel een heel cijfer in voeren.')
-    return a, b, gekozen_operator,input_answer,correct_answer
+        if answer == correct_answer:
+            return True
+        else:
+            return False
+            
 
 def markt():
     display = list(items.keys())
@@ -126,18 +129,21 @@ def chamber_1():
                 'Je ziet een deur voor je.')
     chamber_7()
 def chamber_2():
-    a,b, gekozen_operator,input_answer,correct_answer=sum()   
     print_slow('Je stapt door de deur heen en je ziet een standbeeld voor je.'
         'Het standbeeld heeft een rupee vast.'
-        'Op zijn borst zit een numpad met de toetsen 9 t/m 0.'
-        f'Daarboven zie je een som staan: {a} {gekozen_operator} {b} = ?')
-    if input_answer == correct_answer:
+        'Op zijn borst zit een numpad met de toetsen 9 t/m 0.')
+    correct_sum=sum('Daarboven zie je een som staan:')
+    if correct_sum == True:
         print_slow('Het standbeeld laat de rupee vallen en je pakt het op.')
         player['rupee_amount']+=1
         print_slow(f'Je hebt nu {player['rupee_amount']} rupee in je inventaris.')
     else:
         print_slow('Er gebeurt niets.')
-
+    answer =choice('ja', 'nee','y/n','de shortcut nemen?')
+    if answer == 'ja':
+        chamber_8()
+    else:
+        chamber_6()
 def chamber_3():
     print_slow('Je loopt de kamer binnen en ziet een goblin.'
                 'De goblin verkoopt verschillende items.'
@@ -149,6 +155,7 @@ def chamber_3():
         markt()
     else:
         print_slow('Je besluit niks te kopen.')
+        chamber_4()
 
 def chamber_4():
     print_slow('Maar toen hoorde je een luid gebrul.'
@@ -167,6 +174,17 @@ def chamber_5():
     else:
         print_slow('Helaas heb je geen sleutel om de kist te openen en je verliest.'
                    'Game over')
+def chamber_6():
+    print_slow('Voorzichtig open je de deur.'
+               'Ineens zie je een zombie die recht op je af komt.')
+    fight('zombie')
+    if player['health']>0:
+        print('Je ziet dat je twee kanten op kan gaan: links (kamer 3) of rechts (kamer 8)')
+        answer = choice('links','rechts','direction')
+        if answer == 'links':
+            chamber_3()
+        else:
+            chamber_8()
 def chamber_7():
     fate= buffs(7)
     if fate == 7:
