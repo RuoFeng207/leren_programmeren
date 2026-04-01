@@ -2,7 +2,7 @@ import operator
 delay = 0
 running = True
 player = {
-    "attack": 100,
+    "attack": 1,
     "defense": 0,
     "health": 3,
     "rupee_amount": 1
